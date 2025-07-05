@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.jsx";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.bg-slider {
+    background-image: url('/resources/images/slider-bg.jpg');
+    background-size: cover;
+    background-position: center top -355px;
+    background-repeat: no-repeat;
+}
+
+.bg-light {
+    background: url('/resources/images/bg-light.png') no-repeat center top / cover;
+
+}
+
+.bg-nous-contactez {
+    background-image: url('/resources/images/bg-nous-contacter.png');
+    background-size: cover;
+    background-position: center top -255px;
+    background-repeat: no-repeat;
+}
+
+.bg-slider-apropos {
+    background-image: url('/resources/images/slider-bg.jpg');
+    background-size: cover;
+    background-position: center top -355px;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1600px) {
+    .bg-slider {
+        background-image: url('/resources/images/slider-bg.jpg');
+        background-size: cover;
+        background-position: center top -455px;
+        background-repeat: no-repeat;
+
+    }
+
+    .bg-slider-apropos {
+        background-image: url('/resources/images/slider-bg.jpg');
+        background-size: cover;
+        background-position: center top -440px;
+        background-repeat: no-repeat;
+
+    }
+
+    .bg-slider-apropos-height {
+        height: 500px !important;
+    }
+
+    .title-slider-apropos {
+        align-items: start;
+    }
+
+    .title-slider-apropos h2 {
+        padding-top: 8rem;
+    }
+}
