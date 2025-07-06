@@ -8,6 +8,7 @@ import OurService from '../Components/OurSercives';
 import ASavoir from '../Components/Apropos/ASavoir';
 import Footer from '../Components/Footer';
 import { menus, dataPageContent, subServiceContent } from '../types/data';
+import { CircleCheck } from 'lucide-react';
 
 const ServiceDynamique = () => {
     const { props } = usePage();
@@ -91,79 +92,132 @@ const ServiceDynamique = () => {
             {/* Content Section */}
             {pageContent && pageContent[0]?.data && (
                 <section className="relative top-24 bg-white">
-                    <div className="max-w-screen-xl w-full mx-auto ">
-                        {pageContent[0].data.map((contentItem, index) => (
-                            <motion.div
-                                key={contentItem.id}
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.2 }}
-                                viewport={{ once: true }}
-                                className={`mb-16 py-20 ${index % 2 === 1 ? 'lg:flex-row-reverse bg-[#F9F9FF]' : ''} lg:flex items-center gap-12`}
-                            >
-                                {/* Text Content */}
-                                <div className="lg:w-1/2 mb-8 lg:mb-0">
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -30 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.6, delay: 0.3 }}
-                                        viewport={{ once: true }}
-                                        className="text-4xl font-bold text-[#00ADEF] mb-6"
-                                        dangerouslySetInnerHTML={{ __html: contentItem.title }}
-                                    />
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.6, delay: 0.5 }}
-                                        viewport={{ once: true }}
-                                        className="text-gray-600 leading-relaxed space-y-4 text-justify"
-                                        dangerouslySetInnerHTML={{ __html: contentItem.description }}
-                                    />
-                                    {contentItem.buttonText && contentItem.buttonUrl && (
+                    {pageContent[0].data.map((contentItem, index) => (
+                        <div className={`w-full ${index % 2 === 1 ? 'lg:flex-row-reverse bg-[#F9F9FF]' : ''}`}>
+                            <div className="max-w-screen-xl w-full mx-auto ">
+
+                                <motion.div
+                                    key={contentItem.id}
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                                    viewport={{ once: true }}
+                                    className={` px-10 ${index % 2 === 1 ? 'lg:flex-row-reverse py-10 bg-[#F9F9FF] mb-16' : 'py-10'} lg:flex  gap-24`}
+                                >
+                                    {/* Text Content */}
+                                    <div className="lg:w-1/2 mb-8 lg:mb-0">
                                         <motion.div
-                                            initial={{ opacity: 0, y: 20 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            transition={{ duration: 0.6, delay: 0.7 }}
+                                            initial={{ opacity: 0, x: -30 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.6, delay: 0.3 }}
                                             viewport={{ once: true }}
-                                            className="mt-8"
-                                        >
-                                            <a
-                                                href={contentItem.buttonUrl}
-                                                className="inline-block bg-[#222021] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#0080B8] transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                                            className="text-4xl font-bold text-[#00ADEF] mb-6"
+                                            dangerouslySetInnerHTML={{ __html: contentItem.title }}
+                                        />
+                                        <motion.div
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.6, delay: 0.5 }}
+                                            viewport={{ once: true }}
+                                            className="text-gray-600 text-sm leading-relaxed space-y-4 text-justify"
+                                            dangerouslySetInnerHTML={{ __html: contentItem.description }}
+                                        />
+                                        {contentItem.buttonText && contentItem.buttonUrl && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 20 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.6, delay: 0.7 }}
+                                                viewport={{ once: true }}
+                                                className="mt-8"
                                             >
-                                                {contentItem.buttonText}
-                                            </a>
+                                                <a
+                                                    href={contentItem.buttonUrl}
+                                                    className="inline-block bg-[#222021] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#0080B8] transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                                                >
+                                                    {contentItem.buttonText}
+                                                </a>
+                                            </motion.div>
+                                        )}
+                                    </div>
+
+                                    {/* Image */}
+                                    {contentItem.image && (
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.9 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            transition={{ duration: 0.8, delay: 0.4 }}
+                                            viewport={{ once: true }}
+                                            className="lg:w-1/2"
+                                        >
+                                            <div className="relative overflow-hidden rounded-xl group">
+                                                <img
+                                                    src={contentItem.image}
+                                                    alt={contentItem.title}
+                                                    className={`w-full object-cover group-hover:scale-110 transition-transform duration-700 ${props.service === 'plomberie' && index === 0
+                                                        ? 'h-96 lg:h-[700px]'
+                                                        : 'h-80 lg:h-96'
+                                                        }`}
+                                                />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                            </div>
                                         </motion.div>
                                     )}
-                                </div>
+                                </motion.div>
 
-                                {/* Image */}
-                                {contentItem.image && (
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.9 }}
-                                        whileInView={{ opacity: 1, scale: 1 }}
-                                        transition={{ duration: 0.8, delay: 0.4 }}
-                                        viewport={{ once: true }}
-                                        className="lg:w-1/2"
-                                    >
-                                        <div className="relative overflow-hidden rounded-xl group">
-                                            <img
-                                                src={contentItem.image}
-                                                alt={contentItem.title}
-                                                className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </motion.div>
-                        ))}
+                            </div>
+                        </div>
+                    ))}
+                </section>
+            )}
+            <div className='w-full mt-20'></div>
+            <Testimonies />
+            <ContactezNous />
+            {pageContent && pageContent[0]?.subdata && (
+
+                <section className='w-full bg-[#00ADEF] min-h-[450px] relative pb-10'>
+                    <div className='max-w-screen-xl w-full h-full mx-auto px-10'>
+                        <div className='w-1/2'>
+                            <div className='w-full flex flex-col '>
+                                <div dangerouslySetInnerHTML={{ __html: pageContent[0].subdata[0]['title'] }}></div>
+                                <div className='text-md flex flex-col gap-5 text-justify text-white' dangerouslySetInnerHTML={{ __html: pageContent[0].subdata[0]['description'] }}></div>
+                            </div>
+                            {
+                                pageContent[0].subdata[0]['buttonUrl'] && (
+                                    <a href={pageContent[0].subdata[0]['buttonUrl']} className="inline-block mt-5 bg-[#222021] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#0080B8] transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                                        {pageContent[0].subdata[0]['buttonText']}
+                                    </a>
+                                )
+                            }
+
+                        </div>
+
                     </div>
+                    {
+                        pageContent[0].subdata[1] && (
+                            <div className='w-[500px] min-h-[350px] drop-shadow-xl rounded-b-[20px] py-8 px-5 bg-white absolute top-0 right-[10%]'>
+                                <div className='w-full flex items-center justify-between'>
+                                    <div dangerouslySetInnerHTML={{ __html: pageContent[0].subdata[1]['title'] }}></div>
+                                    <CircleCheck className='text-black w-24 h-24' />
+                                </div>
+                                <div className='text-sm flex flex-col gap-5 text-justify text-[#222021] mt-10' dangerouslySetInnerHTML={{ __html: pageContent[0].subdata[1]['description'] }}></div>
+                                {
+                                    pageContent[0].subdata[1]['buttonUrl'] && (
+                                        <a href={pageContent[0].subdata[1]['buttonUrl']} className="inline-block mt-13  bg-[#222021] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#0080B8] transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                                            {pageContent[0].subdata[1]['buttonText']}
+                                        </a>
+                                    )
+                                }
+
+                            </div>
+                        )
+                    }
+
                 </section>
             )}
 
-            <Testimonies />
-            <ContactezNous />
+
+
+
             <OurService />
             <ASavoir />
             <Footer />

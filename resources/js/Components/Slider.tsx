@@ -73,7 +73,7 @@ const Slider = () => {
         }
     };
     return (
-        <section className="w-full h-[600px] bg-slider relative after:absolute after:w-full after:h-full after:bg-black/60 after:top-0 after:left-0 overflow-hidden">
+        <section className="w-full h-[600px] bg-slider relative top-10 after:absolute after:w-full after:h-full after:bg-black/60 after:top-0 after:left-0 overflow-hidden">
             <div className="w-[480px] h-20 rounded-full bg-[#00ADEF33] absolute z-10 -rotate-45 -right-30 top-[20%]"></div>
             <div className="w-[420px] h-20 rounded-full bg-[#00ADEF33] absolute z-10 -rotate-45 -right-30 top-[35%]"></div>
             <div className="w-[350px] h-20 rounded-full bg-[#00ADEF33] absolute z-10 -rotate-45 -right-30 top-[50%]"></div>
