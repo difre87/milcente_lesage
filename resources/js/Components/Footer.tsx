@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 const Footer = () => {
     return (
-        <section className="w-full bg-[#222021] py-20">
+        <section className="w-full bg-[#222021] py-10">
             <div className="max-w-screen-xl mx-auto w-full">
                 <div className="w-full grid grid-cols-3 gap-10">
                     <div className="flex flex-col">
@@ -36,9 +36,9 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="w-full mt-10 border-t border-[#D4D2E3] pt-5 flex justify-center flex-col items-center">
-                    <span className="text-[#00ADEF] text-lg">L'énergie est notre avenir, économisons-là !</span>
-                    <p className="text-white text-lg">Tous droits réservés © 2025 | SAS MILCENT LESAGE</p>
-                    <p className="text-white text-lg">Mentions légales - Vie privée - infos cookies - Réalisé par Solocal.com</p>
+                    <span className="text-[#00ADEF] text-sm">L'énergie est notre avenir, économisons-là !</span>
+                    <p className="text-white text-sm">Tous droits réservés © 2025 | SAS MILCENT LESAGE</p>
+                    <p className="text-white text-sm">Mentions légales - Vie privée - infos cookies - Réalisé par Solocal.com</p>
                 </div>
             </div>
         </section>
