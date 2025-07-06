@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { usePage } from '@inertiajs/react';
+import { usePage, Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
 import Header from '../Components/Header';
 import Testimonies from '../Components/Testimonies';
@@ -7,7 +7,9 @@ import ContactezNous from '../Components/ContactezNous';
 import OurService from '../Components/OurSercives';
 import ASavoir from '../Components/Apropos/ASavoir';
 import Footer from '../Components/Footer';
-import { menus, dataPageContent, subServiceContent } from '../types/data';
+import Breadcrumbs from '../Components/Breadcrumbs';
+import GlobalSEO from '../Components/GlobalSEO';
+import { menus, dataPageContent, subServiceContent, seoData } from '../types/data';
 import { CircleCheck } from 'lucide-react';
 
 const ServiceDynamique = () => {
@@ -15,6 +17,8 @@ const ServiceDynamique = () => {
     const [pageData, setPageData] = useState(null);
     const [parentService, setParentService] = useState(null);
     const [pageContent, setPageContent] = useState(null);
+    const [seoInfo, setSeoInfo] = useState(null);
+    const [breadcrumbs, setBreadcrumbs] = useState([]);
     const [notFound, setNotFound] = useState(false);
 
     useEffect(() => {
@@ -41,6 +45,13 @@ const ServiceDynamique = () => {
                     setPageData(foundPage);
                     // Récupérer le contenu pour la sous-page (utiliser le slug comme clé)
                     setPageContent(subServiceContent[slug] || dataPageContent[service] || null);
+                    // Récupérer les données SEO pour la sous-page
+                    setSeoInfo(seoData[slug] || seoData[service] || null);
+                    // Générer les breadcrumbs pour la sous-page
+                    setBreadcrumbs([
+                        { title: serviceMenu.title, url: serviceMenu.url },
+                        { title: foundPage.title }
+                    ]);
                 } else {
                     setNotFound(true);
                 }
@@ -49,6 +60,12 @@ const ServiceDynamique = () => {
                 setPageData(serviceMenu);
                 // Récupérer le contenu pour le service principal
                 setPageContent(dataPageContent[service] || null);
+                // Récupérer les données SEO pour le service principal
+                setSeoInfo(seoData[service] || null);
+                // Générer les breadcrumbs pour le service principal
+                setBreadcrumbs([
+                    { title: serviceMenu.title }
+                ]);
             }
         } else {
             setNotFound(true);
@@ -87,7 +104,54 @@ const ServiceDynamique = () => {
 
     return (
         <>
+            {/* SEO Head */}
+            <Head>
+                <title>{seoInfo?.title || 'Milcent Lesage - Services'}</title>
+                <meta name="description" content={seoInfo?.description || 'Services de plomberie, chauffage et climatisation à Orléans'} />
+                <meta name="keywords" content={seoInfo?.keywords || 'plomberie, chauffage, climatisation, orléans'} />
+
+                {/* Open Graph */}
+                <meta property="og:title" content={seoInfo?.title || 'Milcent Lesage - Services'} />
+                <meta property="og:description" content={seoInfo?.description || 'Services de plomberie, chauffage et climatisation à Orléans'} />
+                <meta property="og:image" content={seoInfo?.ogImage || '/assets/images/services/plomberie/1.png'} />
+                <meta property="og:url" content={seoInfo?.canonical || window.location.href} />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Milcent Lesage" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={seoInfo?.title || 'Milcent Lesage - Services'} />
+                <meta name="twitter:description" content={seoInfo?.description || 'Services de plomberie, chauffage et climatisation à Orléans'} />
+                <meta name="twitter:image" content={seoInfo?.ogImage || '/assets/images/services/plomberie/1.png'} />
+
+                {/* Canonical URL */}
+                <link rel="canonical" href={seoInfo?.canonical || window.location.href} />
+
+                {/* Données structurées JSON-LD */}
+                {seoInfo?.structuredData && (
+                    <script type="application/ld+json">
+                        {JSON.stringify(seoInfo.structuredData)}
+                    </script>
+                )}
+
+                {/* Robots */}
+                <meta name="robots" content="index, follow" />
+                <meta name="googlebot" content="index, follow" />
+
+                {/* Localisation */}
+                <meta name="geo.region" content="FR-45" />
+                <meta name="geo.placename" content="Orléans" />
+                <meta name="geo.position" content="47.9029;1.9039" />
+                <meta name="ICBM" content="47.9029, 1.9039" />
+
+                {/* Schema Organization global */}
+                <GlobalSEO />
+            </Head>
+
             <Header isInsidePage={false} />
+
+            {/* Breadcrumbs */}
+            <Breadcrumbs items={breadcrumbs} />
 
             {/* Content Section */}
             {pageContent && pageContent[0]?.data && (
@@ -214,10 +278,6 @@ const ServiceDynamique = () => {
 
                 </section>
             )}
-
-
-
-
             <OurService />
             <ASavoir />
             <Footer />

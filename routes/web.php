@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\SitemapController;
 
 Route::get('/', function () {
     return Inertia::render('Index', [
@@ -17,6 +18,13 @@ Route::get('/apropos', function () {
 Route::get('/contact', function () {
     return Inertia::render('Contact');
 });
+
+Route::get('/debouchage-canalisation', function () {
+    return Inertia::render('DebouchageCanalisation');
+});
+
+// Sitemap
+Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 
 // Routes dynamiques pour les services et leurs sous-pages
 Route::get('/{service}', function ($service) {

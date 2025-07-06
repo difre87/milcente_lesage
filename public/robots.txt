@@ -1,2 +1,20 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://milcentlesage.fr/sitemap.xml
+
+# Disallow admin pages (if any)
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Allow important pages
+Allow: /plomberie
+Allow: /chauffage
+Allow: /salle-de-bain
+Allow: /climatisation
+Allow: /contact
+Allow: /apropos
+
+# Crawl-delay for better server performance
+Crawl-delay: 1

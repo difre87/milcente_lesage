@@ -1,13 +1,77 @@
+import { Head } from '@inertiajs/react';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import Breadcrumbs from '../Components/Breadcrumbs';
+import GlobalSEO from '../Components/GlobalSEO';
 import { Link } from "@inertiajs/react";
 import { ArrowRight } from 'lucide-react';
-
+import { seoData } from '../types/data';
 
 const Contact = () => {
+    const seoInfo = seoData.contact;
+    const breadcrumbs = [
+        { title: "Contact" }
+    ];
+
     return (
         <>
+            <Head>
+                {/* SEO Principal */}
+                <title>{seoInfo.title}</title>
+                <meta name="description" content={seoInfo.description} />
+                <meta name="keywords" content={seoInfo.keywords} />
+
+                {/* Open Graph */}
+                <meta property="og:title" content={seoInfo.title} />
+                <meta property="og:description" content={seoInfo.description} />
+                <meta property="og:image" content={seoInfo.ogImage} />
+                <meta property="og:url" content={seoInfo.canonical} />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Milcent Lesage" />
+                <meta property="og:locale" content="fr_FR" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={seoInfo.title} />
+                <meta name="twitter:description" content={seoInfo.description} />
+                <meta name="twitter:image" content={seoInfo.ogImage} />
+
+                {/* Canonical URL */}
+                <link rel="canonical" href={seoInfo.canonical} />
+
+                {/* Données structurées JSON-LD */}
+                <script type="application/ld+json">
+                    {JSON.stringify(seoInfo.structuredData)}
+                </script>
+
+                {/* Robots */}
+                <meta name="robots" content="index, follow" />
+                <meta name="googlebot" content="index, follow" />
+
+                {/* Localisation */}
+                <meta name="geo.region" content="FR-45" />
+                <meta name="geo.placename" content="Orléans" />
+                <meta name="geo.position" content="47.9029;1.9039" />
+                <meta name="ICBM" content="47.9029, 1.9039" />
+
+                {/* Informations supplémentaires */}
+                <meta name="author" content="Milcent Lesage" />
+                <meta name="copyright" content="Milcent Lesage" />
+                <meta name="language" content="fr" />
+                <meta name="revisit-after" content="7 days" />
+
+                {/* Préférences de navigation */}
+                <meta name="theme-color" content="#00ADEF" />
+                <meta name="msapplication-TileColor" content="#00ADEF" />
+
+                {/* Schema Organization global */}
+                <GlobalSEO />
+            </Head>
+
             <Header isInsidePage={false} />
+
+            {/* Breadcrumbs */}
+            <Breadcrumbs items={breadcrumbs} />
             <section className='w-full h-[1200px] relative flex justify-end'>
                 <div className='w-3/5 h-full pr-3/5'>
                     <img src='/assets/images/bg-contact.jpg' alt='Contact Us' className='w-full h-full object-cover' />

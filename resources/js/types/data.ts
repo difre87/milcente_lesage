@@ -645,3 +645,357 @@ export const testimonials = [
         service: "Chauffage"
     }
 ];
+
+// Données SEO pour chaque service et sous-service
+export const seoData = {
+    // SEO pour les pages principales
+    "index": {
+        title: "Milcent Lesage - Plombier Chauffagiste à Orléans | 30 ans d'expérience",
+        description: "Milcent Lesage, plombier chauffagiste à Orléans depuis 30 ans. Installation, dépannage, rénovation salle de bain, climatisation. Devis gratuit, intervention rapide dans le Loiret.",
+        keywords: "plombier orléans, chauffagiste orléans, milcent lesage, plomberie loiret, chauffage orléans, climatisation orléans, salle de bain orléans, dépannage urgence",
+        canonical: "https://milcentlesage.fr/",
+        ogImage: "/assets/images/slider-bg.jpg",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Milcent Lesage",
+            "description": "Entreprise de plomberie, chauffage et climatisation à Orléans depuis 30 ans",
+            "foundingDate": "1993",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Zone d'activité",
+                "addressLocality": "Ingré",
+                "addressRegion": "Loiret",
+                "postalCode": "45140",
+                "addressCountry": "FR"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "47.9029",
+                "longitude": "1.9039"
+            },
+            "telephone": "02 38 70 12 34",
+            "url": "https://milcentlesage.fr",
+            "openingHours": "Mo-Fr 08:00-18:00",
+            "serviceArea": {
+                "@type": "Place",
+                "name": "Loiret et Orléans métropole"
+            },
+            "priceRange": "€€",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Services de plomberie et chauffage",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Plomberie"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Chauffage"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Salle de bain"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Climatisation"
+                        }
+                    }
+                ]
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "50"
+            }
+        }
+    },
+    "apropos": {
+        title: "À propos de Milcent Lesage - 30 ans d'expérience en plomberie chauffage",
+        description: "Découvrez l'histoire de Milcent Lesage, entreprise familiale de plomberie et chauffage à Orléans depuis 1993. Savoir-faire artisanal, équipe qualifiée, service de proximité.",
+        keywords: "milcent lesage histoire, entreprise familiale, artisan plombier, expérience plomberie, savoir faire chauffage, équipe qualifiée",
+        canonical: "https://milcentlesage.fr/apropos",
+        ogImage: "/assets/images/technicien.png",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "À propos de Milcent Lesage",
+            "description": "Présentation de l'entreprise Milcent Lesage, spécialiste en plomberie et chauffage",
+            "url": "https://milcentlesage.fr/apropos",
+            "mainEntity": {
+                "@type": "Organization",
+                "name": "Milcent Lesage",
+                "foundingDate": "1993",
+                "foundingLocation": {
+                    "@type": "Place",
+                    "name": "Orléans, France"
+                },
+                "description": "Entreprise familiale spécialisée en plomberie, chauffage et climatisation",
+                "numberOfEmployees": "5-10"
+            }
+        }
+    },
+    "contact": {
+        title: "Contact Milcent Lesage - Devis gratuit plomberie chauffage Orléans",
+        description: "Contactez Milcent Lesage pour vos travaux de plomberie, chauffage, climatisation à Orléans. Devis gratuit, intervention rapide. 02 38 70 12 34",
+        keywords: "contact milcent lesage, devis plomberie, devis chauffage, contact plombier orléans, urgence plomberie, telephone plombier",
+        canonical: "https://milcentlesage.fr/contact",
+        ogImage: "/assets/images/bg-contact.jpg",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Milcent Lesage",
+            "description": "Page de contact pour obtenir un devis ou une intervention",
+            "url": "https://milcentlesage.fr/contact",
+            "mainEntity": {
+                "@type": "LocalBusiness",
+                "name": "Milcent Lesage",
+                "telephone": "02 38 70 12 34",
+                "email": "contact@milcentlesage.fr",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Zone d'activité",
+                    "addressLocality": "Ingré",
+                    "addressRegion": "Loiret",
+                    "postalCode": "45140",
+                    "addressCountry": "FR"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "47.9029",
+                    "longitude": "1.9039"
+                },
+                "url": "https://milcentlesage.fr",
+                "openingHours": "Mo-Fr 08:00-18:00",
+                "serviceArea": {
+                    "@type": "Place",
+                    "name": "Loiret, Orléans et environs"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "02 38 70 12 34",
+                    "contactType": "customer service",
+                    "availableLanguage": "French",
+                    "hoursAvailable": "Mo-Fr 08:00-18:00"
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Services de plomberie et chauffage",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Plomberie",
+                                "description": "Installation et dépannage plomberie"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Chauffage",
+                                "description": "Installation et entretien chaudières"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Salle de bain",
+                                "description": "Aménagement et rénovation"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Climatisation",
+                                "description": "Installation climatisation réversible"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+
+    // SEO pour les services principaux
+    "plomberie": {
+        title: "Plombier à Orléans - Installation et Dépannage | Milcent Lesage",
+        description: "Plombier professionnel à Orléans et dans le Loiret. Installation, dépannage 7j/7, réparation de fuites. 30 ans d'expérience. Devis gratuit.",
+        keywords: "plombier orléans, dépannage plomberie, installation plomberie, fuite eau, plombier loiret, urgence plomberie",
+        canonical: "https://milcentlesage.fr/plomberie",
+        ogImage: "/assets/images/services/plomberie/1.png",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Milcent Lesage - Plomberie",
+            "description": "Entreprise de plomberie à Orléans spécialisée dans l'installation et le dépannage",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Orléans",
+                "addressRegion": "Loiret",
+                "addressCountry": "FR"
+            },
+            "telephone": "02 38 70 12 34",
+            "url": "https://milcentlesage.fr/plomberie"
+        }
+    },
+    "chauffage": {
+        title: "Chauffagiste à Orléans - Installation Chaudière | Milcent Lesage",
+        description: "Chauffagiste professionnel à Orléans. Installation et entretien de chaudières gaz, fioul, condensation. Artisan certifié RGE.",
+        keywords: "chauffagiste orléans, installation chaudière, entretien chaudière, chaudière gaz, chaudière condensation",
+        canonical: "https://milcentlesage.fr/chauffage",
+        ogImage: "/assets/images/services/chauffage.jpg",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Milcent Lesage - Chauffage",
+            "description": "Entreprise de chauffage à Orléans spécialisée dans l'installation et l'entretien de chaudières",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Orléans",
+                "addressRegion": "Loiret",
+                "addressCountry": "FR"
+            },
+            "telephone": "02 38 70 12 34",
+            "url": "https://milcentlesage.fr/chauffage",
+            "serviceArea": "Loiret"
+        }
+    },
+    "salle-de-bain": {
+        title: "Aménagement Salle de Bain à Orléans | Milcent Lesage",
+        description: "Création et rénovation de salle de bain clé en main à Orléans. Adaptation PMR, design personnalisé. Devis gratuit.",
+        keywords: "salle de bain orléans, rénovation salle de bain, création salle de bain, PMR, aménagement",
+        canonical: "https://milcentlesage.fr/salle-de-bain",
+        ogImage: "/assets/images/services/salle-de-bain/1.jpg",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Milcent Lesage - Salle de Bain",
+            "description": "Aménagement et rénovation de salle de bain à Orléans",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Orléans",
+                "addressRegion": "Loiret",
+                "addressCountry": "FR"
+            },
+            "telephone": "02 38 70 12 34",
+            "url": "https://milcentlesage.fr/salle-de-bain"
+        }
+    },
+    "climatisation": {
+        title: "Installation Climatisation à Orléans | Milcent Lesage",
+        description: "Installation de climatisation réversible et pompe à chaleur à Orléans. Techniciens certifiés, économies d'énergie garanties.",
+        keywords: "climatisation orléans, climatisation réversible, pompe à chaleur, installation clim",
+        canonical: "https://milcentlesage.fr/climatisation",
+        ogImage: "/assets/images/services/climatisation/1.png",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Milcent Lesage - Climatisation",
+            "description": "Installation de climatisation et pompe à chaleur à Orléans",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Orléans",
+                "addressRegion": "Loiret",
+                "addressCountry": "FR"
+            },
+            "telephone": "02 38 70 12 34",
+            "url": "https://milcentlesage.fr/climatisation"
+        }
+    },
+
+    // SEO pour les sous-services
+    "installation": {
+        title: "Installation Plomberie Neuve à Orléans | Milcent Lesage",
+        description: "Installation de plomberie neuve et rénovation à Orléans. Pose de canalisations, raccordements, équipements sanitaires.",
+        keywords: "installation plomberie, plomberie neuve, pose canalisation, raccordement eau",
+        canonical: "https://milcentlesage.fr/plomberie/installation",
+        ogImage: "/assets/images/services/plomberie/1.png"
+    },
+    "entretien-et-depannage": {
+        title: "Dépannage Plomberie 7j/7 à Orléans | Milcent Lesage",
+        description: "Dépannage plomberie d'urgence 7j/7 à Orléans. Réparation fuites, canalisations bouchées, intervention rapide.",
+        keywords: "dépannage plomberie, urgence plomberie, fuite eau, réparation plomberie",
+        canonical: "https://milcentlesage.fr/plomberie/entretien-et-depannage",
+        ogImage: "/assets/images/services/plomberie/1.png"
+    },
+    "chaudiere-a-condensation": {
+        title: "Chaudière à Condensation à Orléans | Milcent Lesage",
+        description: "Installation chaudière à condensation à Orléans. Rendement jusqu'à 110%, économies d'énergie, artisan RGE.",
+        keywords: "chaudière condensation, installation chaudière, économie énergie, RGE",
+        canonical: "https://milcentlesage.fr/chauffage/chaudiere-a-condensation",
+        ogImage: "/assets/images/services/chauffage.jpg"
+    },
+    "chaudiere-a-gaz": {
+        title: "Chaudière Gaz à Orléans - Installation | Milcent Lesage",
+        description: "Installation chaudière gaz à Orléans. Gaz naturel et propane, excellent rapport qualité-prix, confort optimal.",
+        keywords: "chaudière gaz, installation chaudière gaz, gaz naturel, propane",
+        canonical: "https://milcentlesage.fr/chauffage/chaudiere-a-gaz",
+        ogImage: "/assets/images/services/chauffage.jpg"
+    },
+    "chaudiere-a-fioul": {
+        title: "Chaudière Fioul à Orléans - Installation | Milcent Lesage",
+        description: "Installation chaudière fioul à Orléans. Solution pour habitations non raccordées au gaz, technologies modernes.",
+        keywords: "chaudière fioul, installation chaudière fioul, chauffage fioul",
+        canonical: "https://milcentlesage.fr/chauffage/chaudiere-a-fioul",
+        ogImage: "/assets/images/services/chauffage.jpg"
+    },
+    "chaudiere-a-eau": {
+        title: "Chaudière Eau Chaude à Orléans | Milcent Lesage",
+        description: "Installation chaudière eau chaude à Orléans. Chauffage et eau chaude sanitaire, distribution instantanée.",
+        keywords: "chaudière eau chaude, eau chaude sanitaire, chauffage eau",
+        canonical: "https://milcentlesage.fr/chauffage/chaudiere-a-eau",
+        ogImage: "/assets/images/services/chauffage.jpg"
+    },
+    "entretien": {
+        title: "Entretien Chaudière à Orléans - Obligation Légale | Milcent Lesage",
+        description: "Entretien chaudière obligatoire à Orléans. Contrôle sécurité, optimisation performances, prévention pannes.",
+        keywords: "entretien chaudière, maintenance chaudière, contrôle chaudière, obligation entretien",
+        canonical: "https://milcentlesage.fr/chauffage/entretien",
+        ogImage: "/assets/images/technicien.png"
+    },
+    "creation-cle-en-main": {
+        title: "Création Salle de Bain Clé en Main à Orléans | Milcent Lesage",
+        description: "Création salle de bain clé en main à Orléans. De la conception à la réalisation, design personnalisé, matériaux de qualité.",
+        keywords: "création salle de bain, salle de bain clé en main, rénovation salle de bain, design salle de bain",
+        canonical: "https://milcentlesage.fr/salle-de-bain/creation-cle-en-main",
+        ogImage: "/assets/images/services/salle-de-bain/1.jpg"
+    },
+    "pmr": {
+        title: "Salle de Bain PMR à Orléans - Accessibilité | Milcent Lesage",
+        description: "Aménagement salle de bain PMR à Orléans. Accessibilité, sécurité, adaptation personnes à mobilité réduite.",
+        keywords: "salle de bain PMR, accessibilité, adaptation PMR, douche PMR, aménagement handicap",
+        canonical: "https://milcentlesage.fr/salle-de-bain/pmr",
+        ogImage: "/assets/images/services/salle-de-bain/3.jpg"
+    },
+    "climatisation-reversible": {
+        title: "Climatisation Réversible à Orléans | Milcent Lesage",
+        description: "Installation climatisation réversible à Orléans. Chauffage et rafraîchissement, technologies Inverter, économies d'énergie.",
+        keywords: "climatisation réversible, clim réversible, chauffage climatisation, inverter",
+        canonical: "https://milcentlesage.fr/climatisation/climatisation-reversible",
+        ogImage: "/assets/images/services/climatisation/1.png"
+    },
+    "pompe-a-chaleur": {
+        title: "Pompe à Chaleur à Orléans - Installation | Milcent Lesage",
+        description: "Installation pompe à chaleur à Orléans. Solution écologique, économies jusqu'à 70%, air/air, air/eau, géothermique.",
+        keywords: "pompe à chaleur, PAC, installation PAC, économie énergie, écologique",
+        canonical: "https://milcentlesage.fr/climatisation/pompe-a-chaleur",
+        ogImage: "/assets/images/services/climatisation/1.png"
+    }
+};
