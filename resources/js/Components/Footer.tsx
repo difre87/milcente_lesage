@@ -1,7 +1,12 @@
 import ButtonLink from "./ButtonLink";
 import Logo from "./Logo";
+import { FaFacebookF,FaInstagram,FaLinkedinIn,FaSquareYoutube   } from "react-icons/fa6";
 
-const Footer = () => {
+interface FooterProps {
+    isPage?: boolean;
+}
+
+const Footer = ({ isPage }: FooterProps) => {
     return (
         <section className="w-full bg-[#222021] py-10">
             <div className="max-w-screen-xl mx-auto w-full">
@@ -13,10 +18,10 @@ const Footer = () => {
                             <span className="text-white text-lg">02 38 73 24 07</span>
                         </div>
                         <div className="flex gap-x-5 mt-5">
-                            <a href="" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white"></a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white"></a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white"></a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white"></a>
+                            <a href="" target="_blank" rel="noopener noreferrer" className={`w-10 h-10 rounded-lg bg-white flex justify-center items-center ${isPage ? 'text-[#404CE6]' : 'text-[#00ADEF]'}`}><FaFacebookF/></a>
+                            <a href="" target="_blank" rel="noopener noreferrer" className={`w-10 h-10 rounded-lg bg-white flex justify-center items-center ${isPage ? 'text-[#404CE6]' : 'text-[#00ADEF]'}`}><FaInstagram/></a>
+                            <a href="" target="_blank" rel="noopener noreferrer" className={`w-10 h-10 rounded-lg bg-white flex justify-center items-center ${isPage ? 'text-[#404CE6]' : 'text-[#00ADEF]'}`}><FaLinkedinIn/></a>
+                            <a href="" target="_blank" rel="noopener noreferrer" className={`w-10 h-10 rounded-lg bg-white flex justify-center items-center ${isPage ? 'text-[#404CE6]' : 'text-[#00ADEF]'}`}><FaSquareYoutube/></a>
                         </div>
 
                     </div>
@@ -32,11 +37,11 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className=" flex justify-end  ">
-                        <ButtonLink href="/" className="bg-[#00ADEF] h-14 flex text-sm justify-between items-center text-white text-lg font-bold px-5 py-5 rounded-full  mt-8 text-right transition-all duration-500 hover:bg-[#FF43AF]">Je contacte un plombier</ButtonLink>
+                        <ButtonLink href="/" className={`bg-[#00ADEF] h-14 flex text-sm justify-between items-center text-white text-lg font-bold px-5 py-5 rounded-full  mt-8 text-right transition-all duration-500 hover:bg-[#FF43AF] ${isPage ? '!bg-[#404CE6]' : ''}`}>Je contacte un plombier</ButtonLink>
                     </div>
                 </div>
                 <div className="w-full mt-10 border-t border-[#D4D2E3] pt-5 flex justify-center flex-col items-center">
-                    <span className="text-[#00ADEF] text-sm">L'énergie est notre avenir, économisons-là !</span>
+                    <span className={`text-[#00ADEF] text-sm ${isPage ? '!text-[#FF43AF]' : ''}`}>L'énergie est notre avenir, économisons-là !</span>
                     <p className="text-white text-sm">Tous droits réservés © 2025 | SAS MILCENT LESAGE</p>
                     <p className="text-white text-sm">Mentions légales - Vie privée - infos cookies - Réalisé par Solocal.com</p>
                 </div>

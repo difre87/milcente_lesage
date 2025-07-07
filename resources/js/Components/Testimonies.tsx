@@ -4,6 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useState } from 'react';
 
+interface TestimonialProp {
+    isPage?: boolean;
+}
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -46,7 +50,7 @@ const testimonials = [
 ];
 
 
-const Testimonies = () => {
+const Testimonies = ({ isPage=false }: TestimonialProp) => {
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
 
@@ -59,9 +63,9 @@ const Testimonies = () => {
         <section className="py-20 bg-white">
             <div className="max-w-screen-xl mx-auto w-full">
                 <div className="w-full flex justify-between items-center">
-                    <h1 className="font-bold text-4xl text-[#222021]">Milcent Lesage, les avis de nos clients<br/> sur notre entreprise près d'Orléans</h1>
+                    <h1 className={`font-bold text-4xl text-[#222021] ${isPage ? '!text-[#404CE6]' : ''}`}>Milcent Lesage, les avis de nos clients<br/> sur notre entreprise près d'Orléans</h1>
                     <div className="flex gap-x-5 items-center">
-                        <Link href={""} className="px-10 py-5 transition-all duration-500 bg-[#00ADEF] rounded-full text-white font-bold flex justify-center items-center text-sm gap-x-1 hover:bg-[#222021] group">Rendez-vous <ArrowRight className="w-4 h-4 transition-all duration-150 ease-in-out group-hover:pl-1"/></Link>
+                        <Link href={""} className={`px-10 py-5 transition-all duration-500 bg-[#00ADEF] rounded-full text-white font-bold flex justify-center items-center text-sm gap-x-1 hover:bg-[#222021] group ${isPage ? '!bg-[#FF43AF]' : ''}`}>Rendez-vous <ArrowRight className="w-4 h-4 transition-all duration-150 ease-in-out group-hover:pl-1"/></Link>
                         <Link href={""} className="px-10 py-5 transition-all duration-500  text-[#222021] font-normal flex justify-center items-center text-sm gap-x-1 hover:bg-[#222021] hover:text-white rounded-full">Je contact un plombier</Link>
                     </div>
                 </div>

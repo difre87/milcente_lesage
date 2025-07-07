@@ -1,13 +1,18 @@
 import { Link, usePage } from "@inertiajs/react";
 import { ChevronDown } from "lucide-react";
-import { menus } from "../types/data";
+import { debouchageMenus, menus } from "../types/data";
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Menu = () => {
+interface MenuProps {
+    isProjectPage?: boolean;
+}
+
+const Menu = ({ isProjectPage=false }: MenuProps) => {
     const { url } = usePage();
     const [hoveredMenu, setHoveredMenu] = useState<number | null>(null);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const menuSite = isProjectPage==true ? debouchageMenus : menus;
 
     const isActive = (menuUrl: string) => {
         if (menuUrl === '/') {
@@ -68,10 +73,10 @@ const Menu = () => {
     };
 
     return (
-        <div className="flex-1 flex items-center justify-between gap-x-10">
+        <div className={`flex-1 flex items-center  gap-x-10 ${isProjectPage ? "justify-end" : "justify-between"}`}>
             <nav className="flex gap-x-12 items-center justify-center">
                 {
-                    menus.map((menu, index) => (
+                    menuSite.map((menu, index) => (
                         <div
                             key={index}
                             className="relative"
@@ -146,9 +151,17 @@ const Menu = () => {
                     ))
                 }
             </nav>
-            <Link href={"/contact"} className=" text-white px-6 py-3 font-bold text-md bg-[#008BBF] rounded-full transition-all duration-500 hover:bg-[#FF43AF]">
-                Rendez-vous
-            </Link>
+            {
+                isProjectPage ? (
+                    <Link href={"/contact"} className=" text-white px-6 py-4 font-bold text-sm bg-[#FF43AF] rounded-full transition-all duration-500 hover:bg-[#00ADEF]">
+                        Demande d'intervention
+                    </Link>
+                ) :
+                <Link href={"/contact"} className="text-white px-6 py-3 font-bold text-md bg-[#00ADEF] rounded-full transition-all duration-500 hover:bg-[#FF43AF]">
+                    Rendez-vous
+                </Link>
+            }
+
         </div>
      );
 }

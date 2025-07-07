@@ -69,15 +69,18 @@ export default function Index({ laravelVersion, phpVersion }) {
                 {/* Schema Organization global */}
                 <GlobalSEO />
             </Head>
-            <Header />
-            <Slider />
-            <AboutUs />
-            <OurService />
-            <Service />
-            <Testimonies />
-            <ContactezNous />
-            <Partner />
-            <Footer />
+            <Header isPage={true} />
+            <main className='relative top-14'>
+                <Slider />
+                <AboutUs />
+                <OurService />
+                <Service />
+                <Testimonies />
+                <ContactezNous />
+                <Partner />
+                <Footer />
+            </main>
+
         </>
     );
 }

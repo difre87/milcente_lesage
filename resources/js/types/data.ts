@@ -78,6 +78,21 @@ export const menus = [
     }
 ]
 
+export const debouchageMenus = [
+    {
+        "title": "Accueil",
+        "url": "/debouchage-canalisation",
+    },
+    {
+        "title": "Zone d'intervention",
+        "url": "/debouchage-canalisation/zone-intervention",
+    },
+    {
+        "title": "tarifs",
+        "url": "/debouchage-canalisation/tarifs",
+    }
+];
+
 export const dataPageContent = {
     "plomberie": [
         {
@@ -999,3 +1014,86 @@ export const seoData = {
         ogImage: "/assets/images/services/climatisation/1.png"
     }
 };
+
+export const dataDebouchage = [
+    {
+        "title": "Toilettes",
+        "icon": "/assets/images/debouchage/icons/toilette.svg",
+        "description": "Débouchage de toilettes et WC bouchés.\nIntervention rapide 7j/7 avec équipements professionnels.\nDevis gratuit et tarifs transparents.",
+    },
+    {
+        "title": "Egout",
+        "icon": "/assets/images/debouchage/icons/egout.svg",
+        "description": "Débouchage d'égouts et canalisations principales.\nInspection par caméra et hydrocurage haute pression.\nTraitement des obstructions par racines ou déchets.",
+    },
+    {
+        "title": "Evier / Lavabo",
+        "icon": "/assets/images/debouchage/icons/evier-lavabo.svg",
+        "description": "Débouchage d'évier et lavabo obstrués.\nTraitement des bouchons de graisses et cheveux.\nNettoyage complet du siphon et vérifications.",
+    },
+    {
+        "title": "Douche et Siphon",
+        "icon": "/assets/images/debouchage/icons/douche-siphon.svg",
+        "description": "Débouchage de douche et siphon encrassés.\nDémontage et nettoyage professionnel.\nConseils préventifs pour éviter les récidives.",
+    },
+    {
+        "title": "Salle de Bains",
+        "icon": "/assets/images/debouchage/icons/salle-de-bains.svg",
+        "description": "Débouchage complet de salle de bain.\nTraitement de tous les points d'évacuation.\nIntervention globale baignoire, lavabo, bidet.",
+    },
+    {
+        "title": "Machines",
+        "icon": "/assets/images/debouchage/icons/machine.svg",
+        "description": "Débouchage évacuations lave-linge et lave-vaisselle.\nNettoyage des filtres et raccordements.\nIntervention spécialisée pour éviter les dégâts."
+    }
+
+]
+
+export const dataIntervention = [
+    {
+        "title": "Débouchage",
+        "icon": "/assets/images/debouchage/interventions/1.jpg",
+        "description": "Des experts à votre service pour un débouchage efficace et rapide.",
+    },
+    {
+        "title": "Entretien",
+        "icon": "/assets/images/debouchage/interventions/2.jpg",
+        "description": "Un entretien régulier pour des canalisations toujours en parfait état.",
+    },
+    {
+        "title": "Assainissement",
+        "icon": "/assets/images/debouchage/interventions/3.jpg",
+        "description": "Des solutions adaptées à vos besoins spécifiques.",
+    },
+    {
+        "title": "Curage",
+        "icon": "/assets/images/debouchage/interventions/4.jpg",
+        "description": "Un curage professionnel pour une circulation fluide et sans souci.",
+    },
+    {
+        "title": "Hydrocurage",
+        "icon": "/assets/images/debouchage/interventions/5.jpg",
+        "description": "Une méthode efficace pour des canalisations impeccables.",
+    },
+    {
+        "title": "Inspection vidéo",
+        "icon": "/assets/images/debouchage/interventions/6.jpg",
+        "description": "Une inspection vidéo précise pour une maintenance proactive."
+    },
+    {
+        "title": "Fosse septique",
+        "icon": "/assets/images/debouchage/interventions/7.jpg",
+        "description": "Une vidange experte pour un fonctionnement optimal.",
+    },
+    {
+        "title": "Bac à graisse",
+        "icon": "/assets/images/debouchage/interventions/8.jpg",
+        "description": "Un nettoyage professionnel pour des bacs à graisse impeccables.",
+    },
+    {
+        "title": "Pompage",
+        "icon": "/assets/images/debouchage/interventions/9.jpg",
+        "description": "Un service de pompage fiable pour une évacuation optimale."
+    }
+
+]
