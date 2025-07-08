@@ -606,21 +606,21 @@ export const ourServices = [
     {
         "title": "Plomberie",
         "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.",
-        "url": "/plomberie",
+        "url": "/contact",
         "icon": "/assets/images/services/plomberie.svg",
         "linkTitle": "Je contacte un plombier"
     },
     {
         "title": "Chauffage",
         "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.",
-        "url": "/chauffage",
+        "url": "/contact",
         "icon": "/assets/images/services/chauffage.svg",
         "linkTitle": "Demander un devis"
     },
     {
         "title": "Climatisation",
         "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.",
-        "url": "/climatisation",
+        "url": "/contact",
         "icon": "/assets/images/services/climatisation.svg",
         "linkTitle": "Je contacte un technicien"
     },

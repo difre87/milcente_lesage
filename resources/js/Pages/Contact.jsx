@@ -125,7 +125,7 @@ const Contact = () => {
 
                                 Profitez-en, nos devis sont gratuits !
                             </p>
-                            <Link href={"/"} className="bg-[#222021]  text-white rounded-full px-8 py-4 mt-10 flex justify-center items-center gap-x-2 transition-all duration-500 hover:bg-[#00ADEF]">
+                            <Link href={"/contact"} className="bg-[#222021]  text-white rounded-full px-8 py-4 mt-10 flex justify-center items-center gap-x-2 transition-all duration-500 hover:bg-[#00ADEF]">
                                 Devis gratuit <ArrowRight className="w-4 h-4" />
                             </Link>
                         </div>

@@ -120,7 +120,7 @@ const ContactezNous = () => {
                                 whileTap={{ scale: 0.95 }}
                                 transition={{ duration: 0.2 }}
                             >
-                                <ButtonLink href="" className="bg-[#00ADEF] text-white text-sm font-bold flex justify-center items-center rounded-full px-4 py-3 transition-all duration-300 hover:bg-[#FF43AF]">
+                                <ButtonLink href="/contact" className="bg-[#00ADEF] text-white text-sm font-bold flex justify-center items-center rounded-full px-4 py-3 transition-all duration-300 hover:bg-[#FF43AF]">
                                     Rendez-vous en ligne <ArrowRight />
                                 </ButtonLink>
                             </motion.div>

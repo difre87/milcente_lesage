@@ -117,7 +117,7 @@ const SliderDebouchage = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <Link href={""} className="bg-white rounded-full px-8 flex py-4 justify-center items-center gap-x-2 text-[#00ADEF] transition-all duration-500 hover:bg-[#FF43AF] hover:text-white">
+                            <Link href={"/contact"} className="bg-white rounded-full px-8 flex py-4 justify-center items-center gap-x-2 text-[#00ADEF] transition-all duration-500 hover:bg-[#FF43AF] hover:text-white">
                                 Rendez-vous <ArrowRight strokeWidth={0.6} className="w-4 h-4" />
                             </Link>
                         </motion.div>
@@ -126,7 +126,7 @@ const SliderDebouchage = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <Link href={""} className="bg-transparent border-[2px] border-white rounded-full px-8 flex py-4 justify-center items-center gap-x-2 text-white transition-all duration-500 hover:bg-white hover:text-[#00ADEF]">
+                            <Link href={"/contact"} className="bg-transparent border-[2px] border-white rounded-full px-8 flex py-4 justify-center items-center gap-x-2 text-white transition-all duration-500 hover:bg-white hover:text-[#00ADEF]">
                                 Débouchage en urgence
                             </Link>
                         </motion.div>
@@ -142,8 +142,11 @@ const SliderDebouchage = () => {
                         <Phone  className="w-6 h-6 text-[#434EE5]" />
                     </div>
                     <div className="flex-1 flex flex-col justify-center ml-3 text-white">
+                        <a href="/contact" className="flex flex-col items-center text-center">
                         <span className="text-md font-light">Demande d'intervention</span>
                         <span className="text-lg font-bold uppercase">Rappel gratuit et immédiat</span>
+                        </a>
+
                     </div>
                 </div>
                 <div className="flex items-center ">

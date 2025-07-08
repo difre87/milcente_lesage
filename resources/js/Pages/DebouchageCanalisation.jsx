@@ -199,7 +199,7 @@ const DebouchageCanalisation = () => {
                                         </span>
                                         <span className="text-white">ou</span>
                                         <div>
-                                            <ButtonLink href="" className="bg-[#FF43AF] text-white text-sm font-bold flex justify-center items-center rounded-full px-4 py-4 transition-all duration-300 hover:bg-white hover:text-[#FF43AF]">
+                                            <ButtonLink href="/contact" className="bg-[#FF43AF] text-white text-sm font-bold flex justify-center items-center rounded-full px-4 py-4 transition-all duration-300 hover:bg-white hover:text-[#FF43AF]">
                                                 Rendez-vous en ligne <ArrowRight className="w-4 h-4 ml-2" />
                                             </ButtonLink>
                                         </div>

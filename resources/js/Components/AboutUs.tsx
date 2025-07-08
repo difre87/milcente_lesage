@@ -131,7 +131,7 @@ const AboutUs = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <ButtonLink href="" className="bg-[#00ADEF] text-white px-6 py-4 font-bold text-sm rounded-full hover:bg-[#008BBF] transition-all duration-500">
+                            <ButtonLink href="/contact" className="bg-[#00ADEF] text-white px-6 py-4 font-bold text-sm rounded-full hover:bg-[#008BBF] transition-all duration-500">
                                 Je contacte un plombier
                             </ButtonLink>
                         </motion.div>

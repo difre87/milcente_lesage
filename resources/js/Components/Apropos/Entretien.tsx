@@ -41,7 +41,7 @@ const Entretien = () => {
                         Nos plombiers-chauffagistes se déplacent dans le cadre d’entretien et de dépannage de vos équipements sanitaires et systèmes de chauffage. N’attendez pas la panne pour agir ! Bien souvent, un entretien régulier vous permet de profiter pleinement de votre installation, sans risquer des dépenses onéreuses. Contactez-nous et prenez rendez-vous pour l’entretien de votre plomberie et chauffage !
                         </p>
                     </div>
-                    <Link href={"/"} className="bg-[#222021] absolute z-30 -bottom-[4%] translate-y-[4%] text-white rounded-full px-8 py-4 mt-10 flex justify-center items-center gap-x-2 transition-all duration-500 hover:bg-[#00ADEF]">
+                    <Link href={"/contact"} className="bg-[#222021] absolute z-30 -bottom-[4%] translate-y-[4%] text-white rounded-full px-8 py-4 mt-10 flex justify-center items-center gap-x-2 transition-all duration-500 hover:bg-[#00ADEF]">
                         Je contacte un plombier
                     </Link>
                 </div>

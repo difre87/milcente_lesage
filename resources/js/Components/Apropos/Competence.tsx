@@ -3,7 +3,7 @@ import { Link } from "@inertiajs/react";
 const Competence = () => {
     return (
         <section className="w-full bg-[#F9F9FF] py-20 relative">
-            <Link href={"/"} className="bg-[#222021] absolute z-30 -top-[10%] left-1/2 -translate-x-1/2 translate-y-[10%] text-white rounded-full px-8 py-4 mt-10 flex justify-center items-center gap-x-2 transition-all duration-500 hover:bg-[#00ADEF]">
+            <Link href={"/contact"} className="bg-[#222021] absolute z-30 -top-[10%] left-1/2 -translate-x-1/2 translate-y-[10%] text-white rounded-full px-8 py-4 mt-10 flex justify-center items-center gap-x-2 transition-all duration-500 hover:bg-[#00ADEF]">
                 Je contacte un plombier
             </Link>
             <div className="max-w-screen-xl mx-auto w-full">

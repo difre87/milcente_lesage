@@ -114,7 +114,7 @@ const Slider = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <Link href={""} className="bg-white rounded-full px-8 flex py-4 justify-center items-center gap-x-2 text-[#00ADEF] transition-all duration-500 hover:bg-[#FF43AF] hover:text-white">
+                                <Link href={"/contact"} className="bg-white rounded-full px-8 flex py-4 justify-center items-center gap-x-2 text-[#00ADEF] transition-all duration-500 hover:bg-[#FF43AF] hover:text-white">
                                     Je contact un plombier <ArrowRight />
                                 </Link>
                             </motion.div>
@@ -123,7 +123,7 @@ const Slider = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <Link href={""} className="bg-[#FF43AF] border-[2px] border-white rounded-full px-8 flex py-4 justify-center items-center gap-x-2 text-white transition-all duration-500 hover:bg-white hover:text-[#00ADEF]">
+                                <Link href={"/contact"} className="bg-[#FF43AF] border-[2px] border-white rounded-full px-8 flex py-4 justify-center items-center gap-x-2 text-white transition-all duration-500 hover:bg-white hover:text-[#00ADEF]">
                                     Débouchage en urgence
                                 </Link>
                             </motion.div>

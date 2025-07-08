@@ -37,7 +37,7 @@ const Footer = ({ isPage }: FooterProps) => {
                         </div>
                     </div>
                     <div className=" flex justify-end  ">
-                        <ButtonLink href="/" className={`bg-[#00ADEF] h-14 flex text-sm justify-between items-center text-white text-lg font-bold px-5 py-5 rounded-full  mt-8 text-right transition-all duration-500 hover:bg-[#FF43AF] ${isPage ? '!bg-[#404CE6]' : ''}`}>Je contacte un plombier</ButtonLink>
+                        <ButtonLink href="/contact" className={`bg-[#00ADEF] h-14 flex text-sm justify-between items-center text-white text-lg font-bold px-5 py-5 rounded-full  mt-8 text-right transition-all duration-500 hover:bg-[#FF43AF] ${isPage ? '!bg-[#404CE6]' : ''}`}>Je contacte un plombier</ButtonLink>
                     </div>
                 </div>
                 <div className="w-full mt-10 border-t border-[#D4D2E3] pt-5 flex justify-center flex-col items-center">

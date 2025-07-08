@@ -94,7 +94,7 @@ const Service = () => {
                                 </p>
                             </motion.div>
                             <motion.div variants={itemVariants}>
-                                <ButtonLink href="" className="bg-[#00ADEF] text-white font-bold flex w-[200px] justify-center items-center py-4 px-5 text-sm rounded-full mt-10 transition-all duration-500 hover:bg-[#222021]">Installation plomberie</ButtonLink>
+                                <ButtonLink href="/contact" className="bg-[#00ADEF] text-white font-bold flex w-[200px] justify-center items-center py-4 px-5 text-sm rounded-full mt-10 transition-all duration-500 hover:bg-[#222021]">Installation plomberie</ButtonLink>
                             </motion.div>
                         </motion.div>
                     </div>
@@ -131,7 +131,7 @@ const Service = () => {
                                 </p>
                             </motion.div>
                             <motion.div variants={itemVariants}>
-                                <ButtonLink href="" className="bg-[#222021] text-white font-bold flex w-[200px] text-sm justify-center items-center py-4 px-5 rounded-full mt-10 transition-all duration-500 hover:bg-[#00ADEF]">Installation chauffage</ButtonLink>
+                                <ButtonLink href="/contact" className="bg-[#222021] text-white font-bold flex w-[200px] text-sm justify-center items-center py-4 px-5 rounded-full mt-10 transition-all duration-500 hover:bg-[#00ADEF]">Installation chauffage</ButtonLink>
                             </motion.div>
                         </motion.div>
                         <motion.div
@@ -252,7 +252,7 @@ const Service = () => {
                                 </p>
                             </motion.div>
                             <motion.div variants={itemVariants}>
-                                <ButtonLink href="" className="bg-[#00ADEF] text-white font-bold flex w-[200px] justify-center items-center py-4 px-5 text-sm rounded-full mt-10 transition-all duration-500 hover:bg-[#FF43AF]">Création salle de bains</ButtonLink>
+                                <ButtonLink href="/contact" className="bg-[#00ADEF] text-white font-bold flex w-[200px] justify-center items-center py-4 px-5 text-sm rounded-full mt-10 transition-all duration-500 hover:bg-[#FF43AF]">Création salle de bains</ButtonLink>
                             </motion.div>
                         </motion.div>
                     </div>
@@ -290,7 +290,7 @@ const Service = () => {
                                 </p>
                             </motion.div>
                             <motion.div variants={itemVariants}>
-                                <ButtonLink href="" className="bg-[#222021] text-white font-bold flex w-[220px] justify-center items-center py-4 px-5 text-sm rounded-full mt-10 transition-all duration-500 hover:bg-[#FF43AF]">Installation climatisation</ButtonLink>
+                                <ButtonLink href="/contact" className="bg-[#222021] text-white font-bold flex w-[220px] justify-center items-center py-4 px-5 text-sm rounded-full mt-10 transition-all duration-500 hover:bg-[#FF43AF]">Installation climatisation</ButtonLink>
                             </motion.div>
                         </motion.div>
                         <motion.div
