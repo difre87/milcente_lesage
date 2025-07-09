@@ -43,7 +43,7 @@ const Footer = ({ isPage }: FooterProps) => {
                 <div className="w-full mt-10 border-t border-[#D4D2E3] pt-5 flex justify-center flex-col items-center">
                     <span className={`text-[#00ADEF] text-sm ${isPage ? '!text-[#FF43AF]' : ''}`}>L'énergie est notre avenir, économisons-là !</span>
                     <p className="text-white text-sm">Tous droits réservés © 2025 | SAS MILCENT LESAGE</p>
-                    <p className="text-white text-sm">Mentions légales - Vie privée - infos cookies - Réalisé par Solocal.com</p>
+                    <p className="text-white text-sm">Mentions légales - Vie privée - infos cookies - Réalisé par PerformanceBusiness.com</p>
                 </div>
             </div>
         </section>
