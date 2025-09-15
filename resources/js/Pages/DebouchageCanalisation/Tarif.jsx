@@ -59,7 +59,7 @@ const Tarif = () => {
             {/* Breadcrumbs */}
             <Breadcrumbs items={breadcrumbsData} />
 
-            <main className="relative top-24 ">
+            <main className="relative top-10">
                 <section className="w-full relative h-[450px] bg-[url('/public/assets/images/bg-tarif.jpg')] bg-cover bg-center flex items-center justify-center">
                     <div className="bg-black/70 bg-opacity-50 p-8 rounded absolute left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center">
                         <h2 className="text-white text-5xl font-bold mb-6">Nos tarifs débouchages</h2>
@@ -72,7 +72,7 @@ const Tarif = () => {
                         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-10">
                             {
                                 dataTarifs.map((item, index) => (
-                                    <div key={index} className="bg-white rounded-3xl shadow-lg flex flex-col">
+                                    <div key={index} className="bg-white rounded-3xl drop-shadow-2xl border-[1px] border-[#D9D9D9] flex flex-col">
                                         <h3 className="py-3 text-center bg-[#222021] text-white font-bold text-xl uppercase rounded-t-3xl">{item.label}</h3>
                                         <div className="p-6 flex flex-col gap-4 flex-1 bg-white">
                                             <ul className="list-disc list-inside mb-4 flex justify-center flex-col gap-y-1">
