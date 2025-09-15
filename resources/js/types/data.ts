@@ -1,3 +1,5 @@
+import { i } from "framer-motion/client";
+
 export const menus = [
     {
         "title": "Accueil",
@@ -602,7 +604,14 @@ export const subServiceContent = {
     ],
 };
 
-export const ourServices = [
+/* export const ourServices = [
+    {
+        "title": "Salle de bain",
+        "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.",
+        "url": "/contact",
+        "icon": "/assets/images/services/salle-de-bain-black.svg",
+        "linkTitle": "Je contacte un plombier"
+    },
     {
         "title": "Plomberie",
         "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.",
@@ -624,8 +633,58 @@ export const ourServices = [
         "icon": "/assets/images/services/climatisation.svg",
         "linkTitle": "Je contacte un technicien"
     },
-]
+] */
 
+export const ourServices = [
+    {
+        id: 1,
+        title: "Salle de bain",
+        description: "Création, rénovation et aménagement de salle de bains sur mesure à Orléans et dans le Loiret.",
+        icon: "/assets/images/services/icons/salle-de-bain.svg",
+        linkTitle: "Je contacte un technicien",
+        url: "/contact",
+    },
+    {
+        id: 2,
+        title: "Toilettes",
+        description: "Installation, rénovation et dépannage de toilettes classiques et PMR à Orléans et dans le Loiret.",
+        icon: "/assets/images/services/icons/toilette.svg",
+        linkTitle: "Je contacte un technicien",
+        url: "/contact",
+    },
+    {
+        id: 3,
+        title: "Egout",
+        description: "Débouchage, inspection et réparation de canalisations et égouts à Orléans et dans le Loiret.",
+        icon: "/assets/images/services/icons/egout.svg",
+        linkTitle: "Je contacte un technicien",
+        url: "/contact",
+    },
+    {
+        id: 4,
+        title: "Evier / Lavabo",
+        description: "Installation, réparation et remplacement d'éviers et lavabos à Orléans et dans le Loiret.",
+        icon: "/assets/images/services/icons/evier.svg",
+        linkTitle: "Je contacte un technicien",
+        url: "/contact",
+    },
+    {
+        id: 5,
+        title: "Douche et Siphon",
+        description: "Installation, réparation et remplacement de douches et siphons à Orléans et dans le Loiret.",
+        icon: "/assets/images/services/icons/douche.svg",
+        linkTitle: "Je contacte un technicien",
+        url: "/contact",
+    },
+    {
+        id: 6,
+        title: "Machines",
+        description: "Installation, réparation et entretien de machines à laver et lave-vaisselle à Orléans et dans le Loiret.",
+        icon: "/assets/images/services/icons/machine.svg",
+        linkTitle: "Je contacte un technicien",
+        url: "/contact",
+    }
+]
 export const testimonials = [
     {
         id: 1,
@@ -1012,10 +1071,293 @@ export const seoData = {
         keywords: "pompe à chaleur, PAC, installation PAC, économie énergie, écologique",
         canonical: "https://milcentlesage.fr/climatisation/pompe-a-chaleur",
         ogImage: "/assets/images/services/climatisation/1.png"
+    },
+
+    // SEO pour les pages de débouchage
+    "debouchage-canalisation": {
+        title: "Débouchage Canalisation Orléans - Urgence 24h/7j | Milcent Lesage",
+        description: "Débouchage de canalisation à Orléans et région. Intervention d'urgence 24h/7j, hydrocurage haute pression, inspection caméra. Devis gratuit.",
+        keywords: "débouchage canalisation orléans, débouchage urgence, hydrocurage, débouchage wc, débouchage évier, plombier débouchage",
+        canonical: "https://milcentlesage.fr/debouchage-canalisation",
+        ogImage: "/assets/images/bg-tarif.jpg",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Milcent Lesage - Débouchage Canalisation",
+            "description": "Service de débouchage de canalisation 24h/7j à Orléans et région",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Orléans",
+                "addressRegion": "Loiret",
+                "addressCountry": "FR"
+            },
+            "telephone": "02 38 73 24 07",
+            "url": "https://milcentlesage.fr/debouchage-canalisation",
+            "serviceArea": "Loiret",
+            "availableLanguage": "French",
+            "openingHours": "Mo-Su 00:00-23:59",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Services de débouchage",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Débouchage manuel",
+                            "description": "Débouchage avec équipements manuels professionnels"
+                        },
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "price": "110",
+                            "priceCurrency": "EUR"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Hydrocurage haute pression",
+                            "description": "Nettoyage et débouchage par hydrocurage professionnel"
+                        },
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "price": "240",
+                            "priceCurrency": "EUR"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "debouchage-tarifs": {
+        title: "Tarifs Débouchage Canalisation Orléans - Prix Transparents | Milcent Lesage",
+        description: "Découvrez nos tarifs transparents pour le débouchage de canalisation à Orléans. Forfaits clairs : débouchage manuel 110€, hydrocurage 240€. Devis gratuit.",
+        keywords: "tarif débouchage, prix débouchage canalisation, forfait débouchage, hydrocurage prix, débouchage pas cher orléans",
+        canonical: "https://milcentlesage.fr/debouchage-canalisation/tarifs",
+        ogImage: "/assets/images/bg-tarif.jpg",
+        robots: "index, follow",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Tarifs Débouchage Canalisation",
+            "description": "Grille tarifaire transparente pour le débouchage de canalisation à Orléans",
+            "url": "https://milcentlesage.fr/debouchage-canalisation/tarifs",
+            "mainEntity": {
+                "@type": "PriceSpecification",
+                "@id": "https://milcentlesage.fr/debouchage-canalisation/tarifs#pricing",
+                "name": "Tarifs de débouchage",
+                "description": "Tarification transparente pour tous nos services de débouchage",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "validFrom": "2024-01-01",
+                "validThrough": "2025-12-31"
+            },
+            "about": {
+                "@type": "Service",
+                "name": "Débouchage de canalisation",
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Milcent Lesage",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Orléans",
+                        "addressRegion": "Loiret",
+                        "addressCountry": "FR"
+                    },
+                    "telephone": "02 38 73 24 07"
+                },
+                "areaServed": "Loiret",
+                "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "servicePhone": "02 38 73 24 07",
+                    "availableLanguage": "French"
+                }
+            },
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "Débouchage Manuel",
+                    "description": "Débouchage avec déboucheur révolver et furet mécanique professionnel",
+                    "price": "110",
+                    "priceCurrency": "EUR",
+                    "priceValidUntil": "2025-12-31",
+                    "itemCondition": "NewCondition",
+                    "availability": "InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Passage Caméra",
+                    "description": "Inspection par caméra endoscopique 30 mètres avec enregistrement",
+                    "price": "110",
+                    "priceCurrency": "EUR",
+                    "priceValidUntil": "2025-12-31",
+                    "itemCondition": "NewCondition",
+                    "availability": "InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Hydrocurage",
+                    "description": "Nettoyage haute pression 350 bars avec furet 100 mètres",
+                    "price": "240",
+                    "priceCurrency": "EUR",
+                    "priceValidUntil": "2025-12-31",
+                    "itemCondition": "NewCondition",
+                    "availability": "InStock"
+                }
+            ]
+        }
+    },
+    "debouchage-zone-intervention": {
+        title: "Zone d'Intervention Débouchage Orléans - 30km Autour | Milcent Lesage",
+        description: "Notre zone d'intervention pour le débouchage de canalisation : 30km autour d'Orléans. Fleury-les-Aubrais, Saint-Jean-de-Braye, Olivet, Saran et plus.",
+        keywords: "zone intervention débouchage, débouchage orléans, fleury les aubrais, saint jean de braye, olivet, saran, ingré, débouchage loiret",
+        canonical: "https://milcentlesage.fr/debouchage-canalisation/zone-intervention",
+        ogImage: "/assets/images/bg-zone-intervention.png",
+        robots: "index, follow",
+        structuredData: {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Zone d'Intervention Débouchage",
+            "description": "Zones géographiques couvertes pour le débouchage de canalisation autour d'Orléans",
+            "url": "https://milcentlesage.fr/debouchage-canalisation/zone-intervention",
+            "mainEntity": {
+                "@type": "Service",
+                "name": "Débouchage de canalisation",
+                "serviceType": "Plomberie",
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Milcent Lesage",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Ingré",
+                        "addressRegion": "Loiret",
+                        "postalCode": "45140",
+                        "addressCountry": "FR"
+                    },
+                    "telephone": "02 38 73 24 07",
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": "47.9029",
+                        "longitude": "1.9039"
+                    }
+                },
+                "areaServed": [
+                    {
+                        "@type": "Place",
+                        "name": "Orléans",
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": "47.9029",
+                            "longitude": "1.9039"
+                        }
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Fleury-les-Aubrais"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Saint-Jean-de-la-Ruelle"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Saint-Jean-de-Braye"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Olivet"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Saran"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "La Chapelle-Saint-Mesmin"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Saint-Denis-en-Val"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Ingré"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Chécy"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Meung-sur-Loire"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Beaugency"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Jargeau"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Sandillon"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Saint-Jean-le-Blanc"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Saint-Pryvé-Saint-Mesmin"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Châteauneuf-sur-Loire"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Boigny-sur-Bionne"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Semoy"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Chevilly"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Trainou"
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Marcilly-en-Villette"
+                    }
+                ],
+                "serviceRadius": {
+                    "@type": "QuantitativeValue",
+                    "value": "30",
+                    "unitCode": "KMT"
+                },
+                "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "servicePhone": "02 38 73 24 07",
+                    "availableLanguage": "French"
+                }
+            }
+        }
     }
 };
 
 export const dataDebouchage = [
+    {
+        "title": "Salle de Bains",
+        "icon": "/assets/images/debouchage/icons/salle-de-bains.svg",
+        "description": "Débouchage complet de salle de bain.\nTraitement de tous les points d'évacuation.\nIntervention globale baignoire, lavabo, bidet.",
+    },
     {
         "title": "Toilettes",
         "icon": "/assets/images/debouchage/icons/toilette.svg",
@@ -1036,11 +1378,7 @@ export const dataDebouchage = [
         "icon": "/assets/images/debouchage/icons/douche-siphon.svg",
         "description": "Débouchage de douche et siphon encrassés.\nDémontage et nettoyage professionnel.\nConseils préventifs pour éviter les récidives.",
     },
-    {
-        "title": "Salle de Bains",
-        "icon": "/assets/images/debouchage/icons/salle-de-bains.svg",
-        "description": "Débouchage complet de salle de bain.\nTraitement de tous les points d'évacuation.\nIntervention globale baignoire, lavabo, bidet.",
-    },
+
     {
         "title": "Machines",
         "icon": "/assets/images/debouchage/icons/machine.svg",
@@ -1094,6 +1432,31 @@ export const dataIntervention = [
         "title": "Pompage",
         "icon": "/assets/images/debouchage/interventions/9.jpg",
         "description": "Un service de pompage fiable pour une évacuation optimale."
+    }
+
+]
+
+export const dataTarifs = [
+    {
+        id: 1,
+        label: "Débouchage Manuel",
+        price: 110,
+        description: "Pour ce forfait nous utilisons selon votre installation un déboucheur révolver basse pression, un furet mécanique (professionnel).",
+        services: ["Toillettes bouchées", "Siphon", "Douche / baignoire", "Lave-vaisselle", "Evacuation", "MMachine à laver"]
+    },
+    {
+        id: 2,
+        label: "Passage Caméra",
+        price: 110,
+        description: "Pour ce forfait nous utilisons un furet électrique et un déboucheur haute pression.",
+        services: ["Inspection canalisation sanitaire", "Inspection regard égouts", "Cette intervention consiste à l'usage d'une caméra endoscopique d'une longueur de 30 mètres avec enregistrement vidéo possible. Système agréé par les assurances."]
+    },
+    {
+        id: 3,
+        label: "Hydrocurage",
+        price: 240,
+        description: "Grâce à notre véhicule 4X4, nous pouvons intervenir dans les lieux inaccessibles pour les camions d'assainissement. Nous disposons d'un furet de 100 mètres, d'une puissance de 350 bars.",
+        services: ["Nettoyage canalisation", "Débouchage", "Détartrage", "Curage"]
     }
 
 ]

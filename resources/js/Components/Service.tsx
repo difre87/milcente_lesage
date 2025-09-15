@@ -54,96 +54,6 @@ const Service = () => {
 
     return (
         <>
-            {/* Section Plomberie */}
-            <motion.section
-                className="w-full py-20"
-                variants={sectionVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-            >
-                <div className="max-w-screen-xl mx-auto px-20">
-                    <div className="w-full  min-h-[300px] flex gap-x-20">
-                        <motion.div
-                            className="w-1/2 flex justify-center items-center  overflow-hidden rounded-2xl h-[500px]"
-                            variants={imageVariants}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <img src="/assets/images/services/plomberie.jpg" alt="Service Image" className="w-full h-full object-cover rounded-2xl transition-all duration-500 hover:scale-110 hover:rotate-5" />
-                        </motion.div>
-                        <motion.div
-                            className="w-1/2 flex justify-center  flex-col"
-                            variants={itemVariants}
-                        >
-                            <motion.img
-                                src="/assets/images/services/plomberie.svg"
-                                alt="Service Image"
-                                className="w-16"
-                                variants={itemVariants}
-                            />
-                            <motion.div
-                                className="flex flex-col gap-y-4 mt-20"
-                                variants={itemVariants}
-                            >
-                                <h2 className="text-[#00ADEF] text-3xl font-bold">Plomberie</h2>
-                                <p className="text-[#222021] text-sm font-normal">
-                                    Rénovation ou création d'une nouvelle salle de bains ?
-                                    Faites appel à notre équipe Milcent Lesage à Orléans.
-                                    En neuf ou en rénovation, nous vous proposons nos services en plomberie. Installation de robinetterie, tuyauterie, canalisations, sanitaires, systèmes d'évacuation, raccordement au tout-à-l'égout… Notre plombier
-                                    se déplace aussi pour le dépannage rapide de vos installations en cas de fuite d'eau, canalisation bouchée etc.
-                                </p>
-                            </motion.div>
-                            <motion.div variants={itemVariants}>
-                                <ButtonLink href="/contact" className="bg-[#00ADEF] text-white font-bold flex w-[200px] justify-center items-center py-4 px-5 text-sm rounded-full mt-10 transition-all duration-500 hover:bg-[#222021]">Installation plomberie</ButtonLink>
-                            </motion.div>
-                        </motion.div>
-                    </div>
-                </div>
-            </motion.section>
-
-            {/* Section Chauffage */}
-            <motion.section
-                className="w-full py-20  bg-light"
-                variants={sectionVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-            >
-                <div className="max-w-screen-xl mx-auto px-20">
-                    <div className="w-full  min-h-[300px] flex gap-x-20">
-                        <motion.div
-                            className="w-1/2 flex justify-center  flex-col"
-                            variants={itemVariants}
-                        >
-                            <motion.img
-                                src="/assets/images/services/chauffage.svg"
-                                alt="Service Image"
-                                className="w-16"
-                                variants={itemVariants}
-                            />
-                            <motion.div
-                                className="flex flex-col gap-y-4 mt-20"
-                                variants={itemVariants}
-                            >
-                                <h2 className="text-[#00ADEF] text-3xl font-bold">Chauffage</h2>
-                                <p className="text-[#222021] text-sm font-normal">
-                                    Vous avez besoin de changer votre système de chauffage et ne savez pas par lequel le remplacer ? Selon votre surface à chauffer, votre budget et votre isolation, nous pourrons vous conseiller sur le modèle idéal. Nous pouvons procéder aux travaux et vous installer votre chauffe-eau, vos radiateurs, votre chaudière à condensation, chaudière à gaz, chaudière au fioul ainsi que votre pompe à chaleur.
-                                </p>
-                            </motion.div>
-                            <motion.div variants={itemVariants}>
-                                <ButtonLink href="/contact" className="bg-[#222021] text-white font-bold flex w-[200px] text-sm justify-center items-center py-4 px-5 rounded-full mt-10 transition-all duration-500 hover:bg-[#00ADEF]">Installation chauffage</ButtonLink>
-                            </motion.div>
-                        </motion.div>
-                        <motion.div
-                            className="w-1/2 flex justify-center items-center  overflow-hidden rounded-2xl h-[500px]"
-                            variants={imageVariants}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <img src="/assets/images/services/chauffage.jpg" alt="Service Image" className="w-full h-full object-cover rounded-2xl transition-all duration-500 hover:scale-110 hover:rotate-5" />
-                        </motion.div>
-                    </div>
-                </div>
-            </motion.section>
 
             {/* Section Salle de bain avec Swiper */}
             <motion.section
@@ -258,6 +168,98 @@ const Service = () => {
                     </div>
                 </div>
             </motion.section>
+            {/* Section Plomberie */}
+            <motion.section
+                className="w-full py-20"
+                variants={sectionVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <div className="max-w-screen-xl mx-auto px-20">
+                    <div className="w-full  min-h-[300px] flex gap-x-20">
+                        <motion.div
+                            className="w-1/2 flex justify-center items-center  overflow-hidden rounded-2xl h-[500px]"
+                            variants={imageVariants}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <img src="/assets/images/services/plomberie.jpg" alt="Service Image" className="w-full h-full object-cover rounded-2xl transition-all duration-500 hover:scale-110 hover:rotate-5" />
+                        </motion.div>
+                        <motion.div
+                            className="w-1/2 flex justify-center  flex-col"
+                            variants={itemVariants}
+                        >
+                            <motion.img
+                                src="/assets/images/services/plomberie.svg"
+                                alt="Service Image"
+                                className="w-16"
+                                variants={itemVariants}
+                            />
+                            <motion.div
+                                className="flex flex-col gap-y-4 mt-20"
+                                variants={itemVariants}
+                            >
+                                <h2 className="text-[#00ADEF] text-3xl font-bold">Plomberie</h2>
+                                <p className="text-[#222021] text-sm font-normal">
+                                    Rénovation ou création d'une nouvelle salle de bains ?
+                                    Faites appel à notre équipe Milcent Lesage à Orléans.
+                                    En neuf ou en rénovation, nous vous proposons nos services en plomberie. Installation de robinetterie, tuyauterie, canalisations, sanitaires, systèmes d'évacuation, raccordement au tout-à-l'égout… Notre plombier
+                                    se déplace aussi pour le dépannage rapide de vos installations en cas de fuite d'eau, canalisation bouchée etc.
+                                </p>
+                            </motion.div>
+                            <motion.div variants={itemVariants}>
+                                <ButtonLink href="/contact" className="bg-[#00ADEF] text-white font-bold flex w-[200px] justify-center items-center py-4 px-5 text-sm rounded-full mt-10 transition-all duration-500 hover:bg-[#222021]">Installation plomberie</ButtonLink>
+                            </motion.div>
+                        </motion.div>
+                    </div>
+                </div>
+            </motion.section>
+
+            {/* Section Chauffage */}
+            <motion.section
+                className="w-full py-20  bg-light"
+                variants={sectionVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <div className="max-w-screen-xl mx-auto px-20">
+                    <div className="w-full  min-h-[300px] flex gap-x-20">
+                        <motion.div
+                            className="w-1/2 flex justify-center  flex-col"
+                            variants={itemVariants}
+                        >
+                            <motion.img
+                                src="/assets/images/services/chauffage.svg"
+                                alt="Service Image"
+                                className="w-16"
+                                variants={itemVariants}
+                            />
+                            <motion.div
+                                className="flex flex-col gap-y-4 mt-20"
+                                variants={itemVariants}
+                            >
+                                <h2 className="text-[#00ADEF] text-3xl font-bold">Chauffage</h2>
+                                <p className="text-[#222021] text-sm font-normal">
+                                    Vous avez besoin de changer votre système de chauffage et ne savez pas par lequel le remplacer ? Selon votre surface à chauffer, votre budget et votre isolation, nous pourrons vous conseiller sur le modèle idéal. Nous pouvons procéder aux travaux et vous installer votre chauffe-eau, vos radiateurs, votre chaudière à condensation, chaudière à gaz, chaudière au fioul ainsi que votre pompe à chaleur.
+                                </p>
+                            </motion.div>
+                            <motion.div variants={itemVariants}>
+                                <ButtonLink href="/contact" className="bg-[#222021] text-white font-bold flex w-[200px] text-sm justify-center items-center py-4 px-5 rounded-full mt-10 transition-all duration-500 hover:bg-[#00ADEF]">Installation chauffage</ButtonLink>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                            className="w-1/2 flex justify-center items-center  overflow-hidden rounded-2xl h-[500px]"
+                            variants={imageVariants}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <img src="/assets/images/services/chauffage.jpg" alt="Service Image" className="w-full h-full object-cover rounded-2xl transition-all duration-500 hover:scale-110 hover:rotate-5" />
+                        </motion.div>
+                    </div>
+                </div>
+            </motion.section>
+
+
 
             {/* Section Climatisation */}
             <motion.section

@@ -23,6 +23,14 @@ Route::get('/debouchage-canalisation', function () {
     return Inertia::render('DebouchageCanalisation');
 });
 
+Route::get('/debouchage-canalisation/tarifs', function () {
+    return Inertia::render('DebouchageCanalisation/Tarif');
+});
+
+Route::get('/debouchage-canalisation/zone-intervention', function () {
+    return Inertia::render('DebouchageCanalisation/ZoneIntervention');
+});
+
 // Sitemap
 Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 

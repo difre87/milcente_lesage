@@ -40,6 +40,11 @@ class SitemapController extends Controller
             // Sous-services climatisation
             ['url' => '/climatisation/climatisation-reversible', 'priority' => '0.8', 'changefreq' => 'weekly'],
             ['url' => '/climatisation/pompe-a-chaleur', 'priority' => '0.8', 'changefreq' => 'weekly'],
+
+            // Pages débouchage
+            ['url' => '/debouchage-canalisation', 'priority' => '0.9', 'changefreq' => 'weekly'],
+            ['url' => '/debouchage-canalisation/tarifs', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['url' => '/debouchage-canalisation/zone-intervention', 'priority' => '0.8', 'changefreq' => 'monthly'],
         ];
 
         $sitemap = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";

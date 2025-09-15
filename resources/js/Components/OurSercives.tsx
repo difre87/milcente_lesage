@@ -2,11 +2,18 @@ import { ourServices } from "../types/data";
 import OurServiceItem from "./OurServiceItem";
 import Title from "./Title";
 import { motion } from "framer-motion";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay,  Navigation} from "swiper/modules";
+import { useRef, useState } from 'react';
+import "swiper/css";
+import "swiper/css/navigation";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 
 const OurService = () => {
     // Variants pour l'animation du conteneur principal
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 1 },
         visible: {
             opacity: 1,
             transition: {
@@ -70,17 +77,41 @@ const OurService = () => {
                 >
                     <Title title="Nos prestations" />
                 </motion.div>
-                <motion.div
+                {/* <motion.div
                     className="grid grid-cols-3 gap-x-15 px-20 mt-20"
                     variants={gridVariants}
-                >
+                > */}
+                    {/* Wrapper pour positionner navigation custom */}
+                    <div className="relative mt-20">
+                        {/* Boutons de navigation personnalisés */}
+                        <div className="absolute w-full flex justify-center gap-3 -bottom-28   px-20 z-20">
+                            <button ref={null} aria-label="Previous" className="ourservices-prev cursor-pointer left-1/2 -bottom-26 -translate-y-10 z-20 bg-[#222021] text-[#00ADEF] rounded-full w-10 h-10 shadow-lg flex items-center justify-center hover:scale-105 transition-transform">
+                                <ChevronRight className="w-5 h-5 text-white rotate-180" />
+                            </button>
+                            <button ref={null} aria-label="Next" className="ourservices-next cursor-pointer right-[42%] -bottom-26 -translate-y-10 z-20 bg-[#222021] text-[#00ADEF] rounded-full w-10 h-10 shadow-lg flex items-center justify-center hover:scale-105 transition-transform">
+                                <ChevronRight className="w-5 h-5 text-white" />
+                            </button>
+                        </div>
+
+
+                        <Swiper
+                            slidesPerView={3}
+                            spaceBetween={50}
+                            modules={[Autoplay, Navigation]}
+                            loop={true}
+                            navigation={{
+                                prevEl: '.ourservices-prev',
+                                nextEl: '.ourservices-next'
+                            }}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            }}
+                            className="grid grid-cols-3 gap-x-15 px-50"
+                        >
                     {
                         ourServices.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                transition={{ duration: 0.6 }}
-                            >
+                            <SwiperSlide key={index}>
                                 <OurServiceItem
                                     title={service.title}
                                     description={service.description}
@@ -88,10 +119,13 @@ const OurService = () => {
                                     link={service.url}
                                     linkTitle={service.linkTitle}
                                 />
-                            </motion.div>
+                            </SwiperSlide>
+
                         ))
                     }
-                </motion.div>
+                        </Swiper>
+                    </div>
+                {/* </motion.div> */}
             </motion.div>
         </section>
      );
