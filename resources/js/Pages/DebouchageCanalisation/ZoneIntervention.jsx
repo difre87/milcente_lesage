@@ -59,7 +59,7 @@ const ZoneIntervention = () => {
             {/* Breadcrumbs */}
             <Breadcrumbs items={breadcrumbsData} />
 
-            <main className="w-full relative top-24">
+            <main className="w-full relative">
                 <section className="w-full relative h-[450px] bg-[url('/public/assets/images/bg-zone-intervention.png')] bg-cover bg-center flex items-center justify-center">
                     <div className="bg-black/70 bg-opacity-50 p-8 rounded absolute left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center">
 
