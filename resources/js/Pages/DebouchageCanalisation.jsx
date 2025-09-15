@@ -1,18 +1,65 @@
+import { Head } from "@inertiajs/react";
 import ButtonLink from "../Components/ButtonLink";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import SliderDebouchage from "../Components/SliderDebouchage";
 import Testimonies from "../Components/Testimonies";
 import Title from "../Components/Title";
-import { dataDebouchage, dataIntervention } from "../types/data";
+import GlobalSEO from "../Components/GlobalSEO";
+import Breadcrumbs from "../Components/Breadcrumbs";
+import { dataDebouchage, dataIntervention, seoData } from "../types/data";
 import { Phone, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 
 const DebouchageCanalisation = () => {
+    // Récupération des données SEO
+    const seoDataPage = seoData["debouchage-canalisation"];
+
+    // Données pour les breadcrumbs
+    const breadcrumbsData = [
+        { name: "Accueil", url: "/" },
+        { name: "Débouchage canalisation", url: "/debouchage-canalisation" }
+    ];
+
     return (
         <>
+            {/* SEO Head */}
+            <Head>
+                <title>{seoDataPage.title}</title>
+                <meta name="description" content={seoDataPage.description} />
+                <meta name="keywords" content={seoDataPage.keywords} />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href={seoDataPage.canonical} />
+
+                {/* Open Graph */}
+                <meta property="og:title" content={seoDataPage.title} />
+                <meta property="og:description" content={seoDataPage.description} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={seoDataPage.canonical} />
+                <meta property="og:image" content={seoDataPage.ogImage} />
+                <meta property="og:site_name" content="Milcent Lesage" />
+                <meta property="og:locale" content="fr_FR" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={seoDataPage.title} />
+                <meta name="twitter:description" content={seoDataPage.description} />
+                <meta name="twitter:image" content={seoDataPage.ogImage} />
+
+                {/* Données structurées */}
+                <script type="application/ld+json">
+                    {JSON.stringify(seoDataPage.structuredData)}
+                </script>
+            </Head>
+
+            {/* GlobalSEO pour les données d'organisation */}
+            <GlobalSEO />
+
             <Header isInsidePage={false} isProjectPage={true} />
+
+            {/* Breadcrumbs */}
+            <Breadcrumbs items={breadcrumbsData} />
             <main className="relative top-14">
                 <SliderDebouchage />
                 <motion.section
