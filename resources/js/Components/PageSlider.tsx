@@ -20,10 +20,10 @@ const PageSlider = () => {
     };
 
     return (
-        <section className="w-full h-screen bg-[url('/resources/images/bg-apropos.jpg')] bg-cover bg-center relative top-5 after:absolute after:w-full after:h-full after:bg-black/60 after:top-0 after:left-0 overflow-hidden">
+        <section className="w-full h-screen bg-[url('/resources/images/bg-apropos.jpg')] bg-cover bg-center relative md:top-5 after:absolute after:w-full after:h-full after:bg-black/60 after:top-0 after:left-0 overflow-hidden">
             <div className="w-full h-full flex justify-center items-center flex-col relative z-10">
-                <h1 className="text-6xl text-white font-bold uppercase py-2">Milcent Lesage</h1>
-                <span className="text-5xl text-white font-medium">artisans plombiers-chauffagistes à Ingré</span>
+                <h1 className="md:text-6xl text-4xl text-white font-bold uppercase py-2">Milcent Lesage</h1>
+                <span className="md:text-5xl text-3xl text-white font-medium text-center">artisans plombiers-chauffagistes à Ingré</span>
                 <ButtonLink href="/contact" className="bg-[#00ADEF] rounded-full mt-20 flex justify-center items-center text-md font-bold py-5 px-6 text-white transition-all duration-500 hover:bg-[#FF43AF]">Contactez notre équipe</ButtonLink>
                 <motion.button
                     onClick={scrollToNextSection}

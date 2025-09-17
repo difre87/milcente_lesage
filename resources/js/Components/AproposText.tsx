@@ -1,8 +1,8 @@
 const AproposText = () => {
     return (
-        <section id="apropos-text" className="w-full py-20 bg-white">
+        <section id="apropos-text" className="w-full md:py-20 py-10 bg-white">
             <div className="max-w-screen-xl mx-auto w-full">
-                <div className="w-[1000px] mx-auto flex justify-center items-center flex-col gap-y-8">
+                <div className="md:w-[1000px] w-full mx-auto flex justify-center items-center flex-col md:gap-y-8 gap-y-4">
                     <p  className="text-[#222021] text-md leading-7 text-center">
                        Notre entreprise Milcent Lesage est située à Ingré, près d'Orléans. Nous intervenons depuis de nombreuses années auprès  des particuliers et collectivités, en neuf ou en rénovation.
                     </p>

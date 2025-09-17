@@ -72,11 +72,11 @@ const Contact = () => {
 
             {/* Breadcrumbs */}
             <Breadcrumbs items={breadcrumbs} />
-            <section className='w-full h-[1200px] relative flex justify-end'>
-                <div className='w-3/5 h-full pr-3/5'>
+            <section className='w-full md:h-[1200px] h-[800px] relative md:flex justify-end'>
+                <div className='md:w-3/5 w-full h-full md:pr-3/5'>
                     <img src='/assets/images/bg-contact.jpg' alt='Contact Us' className='w-full h-full object-cover' />
-                    <div className='absolute px-10 top-1/2 -translate-y-1/2 left-[30%] -translate-x-[30%] w-[550px] min-h-[700px] bg-[#00ADEF] rounded-2xl pt-10 pb-20'>
-                        <h1 className='text-4xl font-light pt-10 text-[#222021]'>Une question ?<br /> <b className='font-bold'>Besoin d'un devis ?</b><br /> Ecrivez-nous !</h1>
+                    <div className='absolute z-20 md:px-10 px-4 md:top-1/2 top-14 md:-translate-y-1/2 left-[30%] -translate-x-[30%] md:w-[550px] w-[330px] min-h-[700px] bg-[#00ADEF] rounded-2xl md:pt-10 md:pb-20'>
+                        <h1 className='md:text-4xl text-3xl font-light pt-10 text-[#222021]'>Une question ?<br /> <b className='font-bold'>Besoin d'un devis ?</b><br /> Ecrivez-nous !</h1>
                         <form className='flex flex-col mt-10'>
                             <div className='grid grid-cols-2 gap-5 mb-5'>
                                 <div className='flex flex-col'>
@@ -106,15 +106,15 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
-            <section className="w-full bg-[#F9F9FF] py-20 relative">
+            <section className="w-full bg-[#F9F9FF] py-20 px-4 md:px-0 relative">
 
                 <div className="max-w-screen-xl mx-auto w-full">
-                    <div className="w-full grid grid-cols-2 gap-x-18">
-                        <div className="h-[500px]">
+                    <div className="w-full grid md:grid-cols-2 grid-cols-1 gap-x-18">
+                        <div className="md:h-[500px]">
                             <img src="/assets/images/technicien-3.jpg" alt="Compétences" className="w-full h-full object-cover rounded-3xl " />
                         </div>
                         <div className="flex flex-col justify-center items-start gap-y-8">
-                            <h2 className="text-[#00ADEF] text-4xl font-light"><b className='font-bold'>Plombier-chauffagiste à Orléans,</b><br /> contactez Milcent Lesage</h2>
+                            <h2 className="text-[#00ADEF] md:text-4xl text-3xl mt-5 md:mt-0 font-light"><b className='font-bold'>Plombier-chauffagiste à Orléans,</b><br /> contactez Milcent Lesage</h2>
                             <p className="text-[#222021] text-md font-light text-justify">
                                 Située sur la commune d’Ingré, notre entreprise de plomberie chauffagiste intervient auprès des particuliers comme des professionnels sur toute la région orléanaise. Nos équipes vous accompagnent dans tous vos projets de plomberie, chauffage, climatisation et salle de bains.
                             </p>
@@ -132,30 +132,30 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
-            <section className="w-full bg-white py-20 relative">
+            <section className="w-full bg-white md:py-20 py-10 relative px-4 md:px-0 overflow-hidden">
                 <div className="max-w-screen-xl mx-auto">
-                    <div className="flex justify-center items-center flex-col gap-y-20">
+                    <div className="flex justify-center items-center flex-col md:gap-y-20 gap-y-10">
                         <div className="flex justify-center items-center flex-col gap-y-5">
-                            <h2 className="text-[#00ADEF] text-4xl font-bold">Pourquoi choisir <b className="font-light">Milcent Lesage pour vos travaux ?</b></h2>
+                            <h2 className="text-[#00ADEF] md:text-4xl text-3xl font-bold">Pourquoi choisir <b className="font-light">Milcent Lesage pour vos travaux ?</b></h2>
                         </div>
-                        <div className="flex gap-15">
-                            <div className="w-24 h-24 flex justify-center items-center">
+                        <div className="md:flex grid grid-cols-4 md:gap-15 gap-8">
+                            <div className="md:w-24 md:h-24 flex justify-center items-center">
                                 <img src="/assets/images/about/1.png" alt="Plombier" className="object-cover" />
                             </div>
 
-                            <div className="w-36 h-24 flex justify-center items-center">
+                            <div className="md:w-36 md:h-24 flex justify-center items-center">
                                 <img src="/assets/images/about/2.png" alt="Plombier" className="object-cover" />
                             </div>
 
-                            <div className="w-24 h-24 flex justify-center items-center">
+                            <div className="md:w-24 md:h-24 flex justify-center items-center">
                                 <img src="/assets/images/about/3.png" alt="Plombier" className="object-cover" />
                             </div>
 
-                            <div className="w-20 h-20 flex justify-center items-center">
+                            <div className="md:w-20 md:h-20 flex justify-center items-center">
                                 <img src="/assets/images/about/4.png" alt="Plombier" className="object-cover" />
                             </div>
                         </div>
-                        <div className="w-[1000px] flex flex-col justify-between items-center gap-y-5">
+                        <div className="md:w-[1000px] w-full flex flex-col justify-between items-center gap-y-5">
                             <p className="text-center text-[#222021] text-sm font-light">
                                 Milcent Lesage, c’est avant tout une entreprise familiale de plomberie existant depuis 1994. Grâce à des compétences et un sens du service irréprochables, nous vous apportons expertise et conseil. Pour vos projets en neuf comme en rénovation, nos certifications vous garantissent un travail minutieux.
                             </p>
@@ -166,7 +166,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="absolute w-[200px] h-[200px] bottom-0 right-0">
+                <div className="absolute md:w-[200px] w-[100px] h-[200px] md:bottom-0 -bottom-14 right-0">
                     <img src="/assets/images/water.png" alt="Certification" className="w-full h-full object-cover -rotate-90" />
                 </div>
             </section>

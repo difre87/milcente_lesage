@@ -6,34 +6,34 @@ const Entretien = () => {
             <section className="w-full bg-white h-[300px] bg-slider-apropos-height relative flex flex-col">
                 <div className="w-full h-full flex bg-slider-apropos relative after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-black/70">
                     <div className="w-full h-full flex justify-center items-center relative z-10 title-slider-apropos">
-                        <h2 className="text-5xl font-medium text-white py-10">Un entretien complet de vos équipements</h2>
+                        <h2 className="md:text-5xl text-4xl px-4 font-medium text-white py-10">Un entretien complet de vos équipements</h2>
                     </div>
                 </div>
             </section>
 
             <section className="w-full h-screen bg-[#00ADEF] relative ">
-                <div className="max-w-screen-xl mx-auto w-full bg-white py-20 h-[600px] flex flex-col justify-center items-center rounded-3xl drop-shadow-2xl z-10 absolute left-1/2 -top-[70%] -translate-x-1/2 translate-y-[70%]">
-                    <div className="grid grid-cols-3 gap-40">
+                <div className="max-w-screen-xl mx-auto w-full bg-white px-4 md:px-0 md:py-20 h-[600px] flex flex-col justify-center items-center rounded-3xl drop-shadow-2xl z-10 absolute left-1/2 -top-[70%] -translate-x-1/2 translate-y-[70%]">
+                    <div className="grid grid-cols-3 md:gap-40 gap-10">
                         <div className="flex flex-col justify-center items-center gap-y-5">
-                            <div className="w-[100px] h-[100px] flex justify-center items-center">
+                            <div className="md:w-[100px] md:h-[100px] w-[50px] h-[50px] flex justify-center items-center">
                                 <img src="/assets/images/maintenance.svg" alt="Entretien" className="object-cover" />
                             </div>
-                            <h3 className="text-xl font-bold text-[#00ADEF] text-center">Installation<br/> Maintenance</h3>
+                            <h3 className="md:text-xl font-bold text-[#00ADEF] text-center">Installation<br/> Maintenance</h3>
                         </div>
                         <div className="flex flex-col justify-center items-center gap-y-5">
-                            <div className="w-[100px] h-[100px] flex justify-center items-center">
+                            <div className="md:w-[100px] md:h-[100px] w-[50px] h-[50px]  flex justify-center items-center">
                                 <img src="/assets/images/deplacement.svg" alt="Entretien" className="object-cover" />
                             </div>
-                            <h3 className="text-xl font-bold text-[#00ADEF] text-center">Déplacement<br/> en 24h</h3>
+                            <h3 className="md:text-xl font-bold text-[#00ADEF] text-center">Déplacement<br/> en 24h</h3>
                         </div>
                         <div className="flex flex-col justify-center items-center gap-y-5">
-                            <div className="w-[100px] h-[100px] flex justify-center items-center">
+                            <div className="md:w-[100px] md:h-[100px] w-[50px] h-[50px]  flex justify-center items-center">
                                 <img src="/assets/images/expert.svg" alt="Entretien" className="object-cover" />
                             </div>
-                            <h3 className="text-xl font-bold text-[#00ADEF] text-center">Experts<br/> Certifiés</h3>
+                            <h3 className="md:text-xl font-bold text-[#00ADEF] text-center">Experts<br/> Certifiés</h3>
                         </div>
                     </div>
-                    <div className="flex flex-col justify-center items-center gap-y-5 mt-20 w-[800px]">
+                    <div className="flex flex-col justify-center items-center gap-y-5 mt-20 md:w-[800px]  ">
                         <p className="text-center text-[#222021] text-md font-light">
                             Nos plombiers-chauffagistes se déplacent dans le cadre d’entretien et de dépannage de vos équipements sanitaires et systèmes de chauffage.
                         </p>
@@ -45,7 +45,7 @@ const Entretien = () => {
                         Je contacte un plombier
                     </Link>
                 </div>
-                <div className="absolute w-[950px] h-[300px] bottom-40 left-0 z-20">
+                <div className="absolute md:w-[950px] w-[480px] h-[300px] md:bottom-40 -bottom-24 left-0 z-20">
                     <img src="/assets/images/equipement.png" alt="Entretien" className="object-cover" />
                 </div>
             </section>
