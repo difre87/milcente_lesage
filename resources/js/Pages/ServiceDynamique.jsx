@@ -155,7 +155,7 @@ const ServiceDynamique = () => {
 
             {/* Content Section */}
             {pageContent && pageContent[0]?.data && (
-                <section className="relative top-24 bg-white">
+                <section className="relative md:top-24 bg-white">
                     {pageContent[0].data.map((contentItem, index) => (
                         <div className={`w-full ${index % 2 === 1 ? 'lg:flex-row-reverse bg-[#F9F9FF]' : ''}`}>
                             <div className="max-w-screen-xl w-full mx-auto ">
@@ -166,7 +166,7 @@ const ServiceDynamique = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, delay: index * 0.2 }}
                                     viewport={{ once: true }}
-                                    className={` px-10 ${index % 2 === 1 ? 'lg:flex-row-reverse py-10 bg-[#F9F9FF] mb-16' : 'py-10'} lg:flex  gap-24`}
+                                    className={` md:px-10 px-4 ${index % 2 === 1 ? 'lg:flex-row-reverse md:py-10 bg-[#F9F9FF] mb-16' : 'py-10'} lg:flex  gap-24`}
                                 >
                                     {/* Text Content */}
                                     <div className="lg:w-1/2 mb-8 lg:mb-0">
@@ -175,7 +175,7 @@ const ServiceDynamique = () => {
                                             whileInView={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 0.6, delay: 0.3 }}
                                             viewport={{ once: true }}
-                                            className="text-4xl font-bold text-[#00ADEF] mb-6"
+                                            className="md:text-4xl text-3xl font-bold text-[#00ADEF] mb-6"
                                             dangerouslySetInnerHTML={{ __html: contentItem.title }}
                                         />
                                         <motion.div
@@ -183,7 +183,7 @@ const ServiceDynamique = () => {
                                             whileInView={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 0.6, delay: 0.5 }}
                                             viewport={{ once: true }}
-                                            className="text-gray-600 text-sm leading-relaxed space-y-4 text-justify"
+                                            className="text-gray-600 text-sm leading-relaxed space-y-4 text-justify px-4 md:px-0"
                                             dangerouslySetInnerHTML={{ __html: contentItem.description }}
                                         />
                                         {contentItem.buttonText && contentItem.buttonUrl && (
@@ -211,15 +211,15 @@ const ServiceDynamique = () => {
                                             whileInView={{ opacity: 1, scale: 1 }}
                                             transition={{ duration: 0.8, delay: 0.4 }}
                                             viewport={{ once: true }}
-                                            className="lg:w-1/2"
+                                            className="md:w-1/2 w-full"
                                         >
                                             <div className="relative overflow-hidden rounded-xl group">
                                                 <img
                                                     src={contentItem.image}
                                                     alt={contentItem.title}
                                                     className={`w-full object-cover group-hover:scale-110 transition-transform duration-700 ${props.service === 'plomberie' && index === 0
-                                                        ? 'h-96 lg:h-[700px]'
-                                                        : 'h-80 lg:h-96'
+                                                        ? 'h-80 md:h-[700px]'
+                                                        : 'h-80 md:h-96'
                                                         }`}
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -239,8 +239,8 @@ const ServiceDynamique = () => {
             {pageContent && pageContent[0]?.subdata && (
 
                 <section className='w-full bg-[#00ADEF] min-h-[450px] relative pb-10'>
-                    <div className='max-w-screen-xl w-full h-full mx-auto px-10'>
-                        <div className='w-1/2'>
+                    <div className='max-w-screen-xl w-full h-full mx-auto md:px-10 px-4'>
+                        <div className='md:w-1/2 w-full'>
                             <div className='w-full flex flex-col '>
                                 <div dangerouslySetInnerHTML={{ __html: pageContent[0].subdata[0]['title'] }}></div>
                                 <div className='text-md flex flex-col gap-5 text-justify text-white' dangerouslySetInnerHTML={{ __html: pageContent[0].subdata[0]['description'] }}></div>
@@ -258,7 +258,7 @@ const ServiceDynamique = () => {
                     </div>
                     {
                         pageContent[0].subdata[1] && (
-                            <div className='w-[500px] min-h-[350px] drop-shadow-xl rounded-b-[20px] py-8 px-5 bg-white absolute top-0 right-[10%]'>
+                            <div className='md:w-[500px] w-full min-h-[350px] drop-shadow-xl rounded-b-[20px] py-8 px-5 bg-white md:absolute top-0 md:right-[10%]'>
                                 <div className='w-full flex items-center justify-between'>
                                     <div dangerouslySetInnerHTML={{ __html: pageContent[0].subdata[1]['title'] }}></div>
                                     <CircleCheck className='text-black w-24 h-24' />

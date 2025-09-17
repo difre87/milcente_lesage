@@ -69,25 +69,25 @@ const ASavoir = () => {
         }
     };
     return (
-        <section className="w-full bg-white py-20 relative">
+        <section className="w-full bg-white md:py-20 py-10 px-4 md:px-0 relative overflow-hidden">
             <div className="max-w-screen-xl mx-auto">
                 <motion.div
-                    className="flex justify-center items-center flex-col gap-y-20"
+                    className="flex justify-center items-center flex-col md:gap-y-20 gap-y-10"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                 >
                     <motion.div variants={titleVariants}>
-                        <h2 className="text-[#00ADEF] text-4xl font-light">En savoir plus sur <b className="font-bold">nos certifications</b></h2>
+                        <h2 className="text-[#00ADEF] md:text-4xl text-3xl font-light">En savoir plus sur <b className="font-bold">nos certifications</b></h2>
                     </motion.div>
 
                     <motion.div
-                        className="flex gap-15"
+                        className="md:flex grid grid-cols-4 md:gap-15 gap-8"
                         variants={iconsContainerVariants}
                     >
                         <motion.div
-                            className="w-24 h-24 flex justify-center items-center"
+                            className="md:w-24 md:h-24 flex justify-center items-center"
                             variants={iconVariants}
                             whileHover={{ scale: 1.1, rotate: 5 }}
                         >
@@ -95,7 +95,7 @@ const ASavoir = () => {
                         </motion.div>
 
                         <motion.div
-                            className="w-36 h-24 flex justify-center items-center"
+                            className="md:w-36 md:h-24 flex justify-center items-center"
                             variants={iconVariants}
                             whileHover={{ scale: 1.1, rotate: -5 }}
                         >
@@ -103,7 +103,7 @@ const ASavoir = () => {
                         </motion.div>
 
                         <motion.div
-                            className="w-24 h-24 flex justify-center items-center"
+                            className="md:w-24 md:h-24 flex justify-center items-center"
                             variants={iconVariants}
                             whileHover={{ scale: 1.1, rotate: 5 }}
                         >
@@ -111,7 +111,7 @@ const ASavoir = () => {
                         </motion.div>
 
                         <motion.div
-                            className="w-20 h-20 flex justify-center items-center"
+                            className="md:w-20 md:h-20 flex justify-center items-center"
                             variants={iconVariants}
                             whileHover={{ scale: 1.1, rotate: -5 }}
                         >
@@ -119,7 +119,7 @@ const ASavoir = () => {
                         </motion.div>
                     </motion.div>
 
-                    <motion.div className="w-[1000px] flex flex-col justify-between items-center gap-y-5" variants={textVariants}>
+                    <motion.div className="md:w-[1000px] flex flex-col justify-between items-center gap-y-5" variants={textVariants}>
                         <p className="text-center text-[#222021] text-sm font-light">
                            Milcent Lesage est qualifié Qualigaz, PGP (Professionnel Gaz Propane) et PGN (Professionnel Gaz Naturel). Ces certifications sont une garantie pour chacun de nos clients et prouvent notre maîtrise des installations gaz, pour la plomberie, comme pour le chauffage.
                         </p>
@@ -134,7 +134,7 @@ const ASavoir = () => {
 
                 </motion.div>
             </div>
-            <div className="absolute w-[200px] h-[200px] bottom-0 right-0">
+            <div className="absolute md:w-[200px] w-[100px] h-[200px] md:bottom-0 -bottom-14 right-0">
                 <img src="/assets/images/water.png" alt="Certification" className="w-full h-full object-cover -rotate-90" />
             </div>
         </section>

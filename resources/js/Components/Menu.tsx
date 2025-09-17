@@ -87,7 +87,7 @@ const Menu = ({ isProjectPage=false, isMobile=false }: MenuProps) => {
 
     return (
         <div className={`flex-1 flex flex-col md:flex-row md:items-center  gap-x-10 ${isProjectPage ? "justify-end" : "justify-between"}`}>
-            <nav className={`flex md:flex-row flex-col gap-x-12 ${isMobile ? 'gap-y-2' : 'gap-y-4'} md:gap-y-0 mb-10 md:mb-0 md:items-center justify-center`}>
+            <nav className={`flex md:flex-row flex-col gap-x-12 ${isMobile ? 'gap-y-4' : 'gap-y-4'} md:gap-y-0 mb-10 md:mb-0 md:items-center justify-center`}>
                 {
                     menuSite.map((menu, index) => (
                         <div
