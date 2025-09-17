@@ -70,9 +70,21 @@ const Header = ({ isInsidePage=true, isProjectPage=false }: HeaderProps) => {
                     </section>
                 )
             }
-        <div className={`w-[250px] h-full fixed top-0 left-0 bg-[#222021] z-50 transform transition-transform duration-300 ease-in-out md:hidden ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
-            <XIcon onClick={handleSidebarToggle} className="text-white w-8 h-8 m-4 cursor-pointer"/>
-            <div className="mt-10 px-5">
+        {/* Overlay pour fermer la sidebar */}
+        {isSidebarOpen && (
+            <div
+                className="fixed inset-0 bg-black/50 z-40 md:hidden"
+                onClick={handleSidebarToggle}
+            ></div>
+        )}
+
+        {/* Sidebar mobile */}
+        <div className={`w-[280px] h-full fixed top-0 left-0 bg-[#222021] z-50 transform transition-transform duration-300 ease-in-out md:hidden ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
+            <div className="flex items-center justify-between p-4 border-b border-gray-700">
+                <Logo />
+                <XIcon onClick={handleSidebarToggle} className="text-white w-6 h-6 cursor-pointer"/>
+            </div>
+            <div className="mt-6 px-4 overflow-y-auto">
                 <Menu isProjectPage={isProjectPage} isMobile={true} />
             </div>
         </div>
