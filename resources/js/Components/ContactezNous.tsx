@@ -72,7 +72,7 @@ const ContactezNous = () => {
 
     return (
         <motion.section
-            className="bg-nous-contactez w-full relative"
+            className="bg-nous-contactez w-full relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -81,29 +81,29 @@ const ContactezNous = () => {
             <motion.img
                 src="/assets/images/technicien-2.png"
                 alt="Contactez Nous"
-                className="absolute w-[550px] -top-[15%]"
+                className="md:absolute w-[500px] md:top-[3%]"
                 variants={technicianVariants}
                 transition={{ duration: 1 }}
             />
-            <div className="w-full h-full py-10 min-h-[300px] flex justify-end" style={{background: 'linear-gradient(to right, #222021 50%, rgba(34, 32, 33, 0.8) 75%, rgba(34, 32, 33, 0.5) 85%, rgba(34, 32, 33, 0.6) 100%)'}}>
+            <div className="w-full h-full py-10 px-4 min-h-[300px] flex justify-end" style={{background: 'linear-gradient(to right, #222021 50%, rgba(34, 32, 33, 0.8) 75%, rgba(34, 32, 33, 0.5) 85%, rgba(34, 32, 33, 0.6) 100%)'}}>
                 <div className="max-w-screen-xl w-full mx-auto h-full flex justify-end flex-col">
-                    <div className="pl-[32rem] flex flex-col">
+                    <div className="md:pl-[32rem] flex flex-col">
                         <motion.h2
-                            className="text-white text-3xl font-bold"
+                            className="text-white md:text-3xl text-xl font-bold text-center md:text-left"
                             variants={textVariants}
                             transition={{ duration: 0.8 }}
                         >
                             Besoin d'un plombier, chauffagiste<br/> ou un technicien en climatisation à Orléans ?
                         </motion.h2>
                         <motion.h2
-                            className="text-4xl text-[#00ADEF] font-bold mt-15"
+                            className="md:text-4xl text-2xl text-[#00ADEF] font-bold md:mt-15 mt-8 text-center md:text-left"
                             variants={titleVariants}
                             transition={{ duration: 0.8, delay: 0.3 }}
                         >
                             Contactez-nous
                         </motion.h2>
                         <motion.div
-                            className="flex gap-x-10 items-center mt-5"
+                            className="flex md:flex-row flex-col gap-x-10 items-center mt-5"
                             variants={contactVariants}
                             transition={{ duration: 0.6, delay: 0.5 }}
                         >
@@ -121,7 +121,7 @@ const ContactezNous = () => {
                                 transition={{ duration: 0.2 }}
                             >
                                 <ButtonLink href="/contact" className="bg-[#00ADEF] text-white text-sm font-bold flex justify-center items-center rounded-full px-4 py-3 transition-all duration-300 hover:bg-[#FF43AF]">
-                                    Rendez-vous en ligne <ArrowRight />
+                                    Rendez-vous en ligne <ArrowRight className="w-4 h-4" />
                                 </ButtonLink>
                             </motion.div>
                         </motion.div>

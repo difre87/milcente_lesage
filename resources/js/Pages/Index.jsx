@@ -70,7 +70,7 @@ export default function Index({ laravelVersion, phpVersion }) {
                 <GlobalSEO />
             </Head>
             <Header isPage={true} />
-            <main className='relative top-14'>
+            <main className='relative md:top-14'>
                 <Slider />
                 <AboutUs />
                 <OurService />

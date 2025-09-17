@@ -6,9 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface MenuProps {
     isProjectPage?: boolean;
+    isMobile?: boolean;
 }
 
-const Menu = ({ isProjectPage=false }: MenuProps) => {
+const Menu = ({ isProjectPage=false, isMobile=false }: MenuProps) => {
     const { url } = usePage();
     const [hoveredMenu, setHoveredMenu] = useState<number | null>(null);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -73,8 +74,8 @@ const Menu = ({ isProjectPage=false }: MenuProps) => {
     };
 
     return (
-        <div className={`flex-1 flex items-center  gap-x-10 ${isProjectPage ? "justify-end" : "justify-between"}`}>
-            <nav className="flex gap-x-12 items-center justify-center">
+        <div className={`flex-1 flex flex-col md:flex-row md:items-center  gap-x-10 ${isProjectPage ? "justify-end" : "justify-between"}`}>
+            <nav className="flex md:flex-row flex-col gap-x-12 gap-y-4 md:gap-y-0 mb-10 md:mb-0 md:items-center justify-center">
                 {
                     menuSite.map((menu, index) => (
                         <div
@@ -89,7 +90,9 @@ const Menu = ({ isProjectPage=false }: MenuProps) => {
                                     isActive(menu.url)
                                         ? "text-[#00ADEF] font-bold"
                                         : "text-white hover:text-[#00ADEF]"
-                                }`}
+                                }`
+
+                            }
                             >
                                 {menu.title}
                                 {hasSubmenus(menu) && (

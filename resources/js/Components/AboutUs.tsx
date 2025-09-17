@@ -70,10 +70,10 @@ const AboutUs = () => {
         }
     };
     return (
-        <section className="w-full py-20 bg-white">
+        <section className="w-full md:py-20 py-10 px-4 md:px-0 bg-white">
             <div className="max-w-screen-xl mx-auto">
                 <motion.div
-                    className="flex justify-center items-center flex-col gap-y-20"
+                    className="flex justify-center items-center flex-col md:gap-y-20 gap-y-10"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -84,11 +84,11 @@ const AboutUs = () => {
                     </motion.div>
 
                     <motion.div
-                        className="flex gap-15"
+                        className="md:flex items-center justify-center grid grid-cols-4 md:gap-15 gap-8 w-full"
                         variants={iconsContainerVariants}
                     >
                         <motion.div
-                            className="w-24 h-24 flex justify-center items-center"
+                            className="md:w-24 md:h-24 flex justify-center items-center"
                             variants={iconVariants}
                             whileHover={{ scale: 1.1, rotate: 5 }}
                         >
@@ -96,7 +96,7 @@ const AboutUs = () => {
                         </motion.div>
 
                         <motion.div
-                            className="w-36 h-24 flex justify-center items-center"
+                            className="md:w-36 md:h-24 flex justify-center items-center"
                             variants={iconVariants}
                             whileHover={{ scale: 1.1, rotate: -5 }}
                         >
@@ -104,7 +104,7 @@ const AboutUs = () => {
                         </motion.div>
 
                         <motion.div
-                            className="w-24 h-24 flex justify-center items-center"
+                            className="md:w-24 md:h-24 flex justify-center items-center"
                             variants={iconVariants}
                             whileHover={{ scale: 1.1, rotate: 5 }}
                         >
@@ -112,7 +112,7 @@ const AboutUs = () => {
                         </motion.div>
 
                         <motion.div
-                            className="w-20 h-20 flex justify-center items-center"
+                            className="md:w-20 md:h-20 flex justify-center items-center"
                             variants={iconVariants}
                             whileHover={{ scale: 1.1, rotate: -5 }}
                         >
@@ -120,7 +120,7 @@ const AboutUs = () => {
                         </motion.div>
                     </motion.div>
 
-                    <motion.div className="w-[900px]" variants={textVariants}>
+                    <motion.div className="md:w-[900px] w-full" variants={textVariants}>
                         <p className="text-center text-[#222021] text-sm font-light">
                             Grâce à des compétences et un sens du service irréprochables, nous apportons notre expertise et notre savoir-faire sur vos projets de plomberie en neuf ou rénovation, pour la création de salle de bains ou encore en climatisation. Nos certifications vous garantissent un travail exécuté dans les règles de l'art par nos équipes de plombiers-chauffagistes.
                         </p>

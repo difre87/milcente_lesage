@@ -60,18 +60,18 @@ const Testimonies = ({ isPage=false }: TestimonialProp) => {
     };
 
     return (
-        <section className="py-20 bg-white">
+        <section className="md:py-20 py-10 px-4 md:px-4 bg-white">
             <div className="max-w-screen-xl mx-auto w-full">
-                <div className="w-full flex justify-between items-center">
-                    <h1 className={`font-bold text-4xl text-[#222021] ${isPage ? '!text-[#404CE6]' : ''}`}>Milcent Lesage, les avis de nos clients<br/> sur notre entreprise près d'Orléans</h1>
-                    <div className="flex gap-x-5 items-center">
-                        <Link href={"/contact"} className={`px-10 py-5 transition-all duration-500 bg-[#00ADEF] rounded-full text-white font-bold flex justify-center items-center text-sm gap-x-1 hover:bg-[#222021] group ${isPage ? '!bg-[#FF43AF]' : ''}`}>Rendez-vous <ArrowRight className="w-4 h-4 transition-all duration-150 ease-in-out group-hover:pl-1"/></Link>
-                        <Link href={"/contact"} className="px-10 py-5 transition-all duration-500  text-[#222021] font-normal flex justify-center items-center text-sm gap-x-1 hover:bg-[#222021] hover:text-white rounded-full">Je contact un plombier</Link>
+                <div className="w-full flex flex-col md:flex-row justify-between items-center">
+                    <h1 className={`font-bold md:text-4xl text-md text-[#222021] ${isPage ? '!text-[#404CE6]' : ''}`}>Milcent Lesage, les avis de nos clients<br/> sur notre entreprise près d'Orléans</h1>
+                    <div className="md:flex grid grid-cols-2 gap-x-5 items-center mt-5 md:mt-0">
+                        <Link href={"/contact"} className={`md:px-10 px-5 md:py-5 py-4 transition-all duration-500 bg-[#00ADEF] rounded-full text-white font-bold flex justify-center items-center md:text-sm text-[12px] gap-x-1 hover:bg-[#222021] group ${isPage ? '!bg-[#FF43AF]' : ''}`}>Rendez-vous <ArrowRight className="w-4 h-4 transition-all duration-150 ease-in-out group-hover:pl-1"/></Link>
+                        <Link href={"/contact"} className="md:px-10 px-0 md:py-5 py-4 transition-all duration-500  text-[#222021] font-normal flex justify-center items-center md:text-sm text-[12px] gap-x-1 hover:bg-[#222021] hover:text-white rounded-full">Je contact un plombier</Link>
                     </div>
                 </div>
 
                 {/* Carousel des témoignages */}
-                <div className="relative mt-20">
+                <div className="relative md:mt-20 mt-10">
                     <Swiper
                         modules={[Navigation, Pagination, Autoplay]}
                         spaceBetween={30}
@@ -89,6 +89,9 @@ const Testimonies = ({ isPage=false }: TestimonialProp) => {
                             disableOnInteraction: false,
                         }}
                         breakpoints={{
+                            320: {
+                                slidesPerView: 1,
+                            },
                             640: {
                                 slidesPerView: 2,
                             },
@@ -124,15 +127,15 @@ const Testimonies = ({ isPage=false }: TestimonialProp) => {
                     </Swiper>
 
                     {/* Navigation personnalisée */}
-                    <div className={`swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-[#222021] rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:dropshadow-2xl transition-all duration-500 ${isBeginning ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                    <div className={`swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 md:w-12 md:h-12 w-10 h-10 bg-[#222021] rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:dropshadow-2xl transition-all duration-500 ${isBeginning ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                         <ChevronRight className="w-5 h-5 text-white rotate-180" />
                     </div>
-                    <div className={`swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-[#222021] rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:dropshadow-2xl transition-all duration-500 ${isEnd ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                    <div className={`swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 md:w-12 md:h-12 w-10 h-10 bg-[#222021] rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:dropshadow-2xl transition-all duration-500 ${isEnd ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                         <ChevronRight className="w-5 h-5 text-white" />
                     </div>
 
                     {/* Pagination personnalisée */}
-                    <div className="swiper-pagination-custom flex justify-center mt-8"></div>
+                    <div className="swiper-pagination-custom md:flex justify-center mt-8 hidden"></div>
                 </div>
             </div>
         </section>

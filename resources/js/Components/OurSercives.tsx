@@ -62,7 +62,7 @@ const OurService = () => {
     };
 
     return (
-        <section className="w-full py-20 bg-[#00ADEF0D]">
+        <section className="w-full md:py-20 py-12 px-10 md:px-0 bg-[#00ADEF0D]">
             <motion.div
                 className="max-w-screen-xl mx-auto"
                 variants={containerVariants}
@@ -82,9 +82,9 @@ const OurService = () => {
                     variants={gridVariants}
                 > */}
                     {/* Wrapper pour positionner navigation custom */}
-                    <div className="relative mt-20">
+                    <div className="relative md:mt-20 mt-10">
                         {/* Boutons de navigation personnalisés */}
-                        <div className="absolute w-full flex justify-center gap-3 -bottom-28   px-20 z-20">
+                        <div className="absolute w-full flex justify-center gap-3 md:-bottom-28 -bottom-18   px-20 z-20">
                             <button ref={null} aria-label="Previous" className="ourservices-prev cursor-pointer left-1/2 -bottom-26 -translate-y-10 z-20 bg-[#222021] text-[#00ADEF] rounded-full w-10 h-10 shadow-lg flex items-center justify-center hover:scale-105 transition-transform">
                                 <ChevronRight className="w-5 h-5 text-white rotate-180" />
                             </button>
@@ -107,7 +107,17 @@ const OurService = () => {
                                 delay: 2500,
                                 disableOnInteraction: false,
                             }}
-                            className="grid grid-cols-3 gap-x-15 px-50"
+                            breakpoints={{
+                                320: {
+                                    slidesPerView: 1,
+                                },
+                                640: {
+                                    slidesPerView: 2,
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                },
+                            }}
                         >
                     {
                         ourServices.map((service, index) => (
