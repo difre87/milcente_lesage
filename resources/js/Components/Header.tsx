@@ -47,7 +47,7 @@ const Header = ({ isInsidePage=true, isProjectPage=false }: HeaderProps) => {
             }
             {
                 isProjectPage && (
-                    <section className="relative h-14 w-full flex items-center justify-center top-24 overflow-hidden">
+                    <section className="relative h-14 w-full flex items-center justify-center md:top-24 overflow-hidden px-4 md:px-0">
                         {/* Effet dégradé principal - couleurs pures et vives */}
                         <div className="absolute inset-0 bg-gradient-to-r from-[#404CE6] via-[#4F4FEF] to-[#696AD9]"></div>
 
@@ -57,13 +57,13 @@ const Header = ({ isInsidePage=true, isProjectPage=false }: HeaderProps) => {
 
                         {/* Contenu */}
                         <div className="relative z-10 flex items-center justify-center">
-                            <span className="text-md text-white pr-3 relative after:absolute after:h-[18px] after:w-[1px] after:bg-white/60 after:right-0 after:top-[3px] font-medium">
+                            <span className="md:text-md text-[12px] text-white pr-3 relative after:absolute after:h-[18px] after:w-[1px] after:bg-white/60 after:right-0 after:top-[3px] font-medium">
                                Disponible <b className="text-white font-bold">24h/24 et 7j/7</b>
                             </span>
                             <span className="px-3 text-md text-white relative after:absolute after:h-[18px] after:w-[1px] after:bg-white/60 after:right-0 after:top-[3px] font-medium">
                                 Orléans
                             </span>
-                            <span className="px-3 text-md text-white relative font-bold flex gap-x-2">
+                            <span className="px-3 md:text-md text-[12px] text-white relative font-bold flex gap-x-2">
                                 Intervention immédiate
                             </span>
                         </div>

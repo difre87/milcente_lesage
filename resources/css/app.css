@@ -65,6 +65,13 @@ body {
 
     }
 
+    .bg-slider-debouchage {
+        background-image: url('/resources/images/bg-debouchage.jpg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
     .bg-slider-apropos {
         background-image: url('/resources/images/slider-bg.jpg');
         background-size: cover;

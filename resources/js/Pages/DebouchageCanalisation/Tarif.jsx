@@ -9,6 +9,11 @@ import ContactezNous from "../../Components/ContactezNous";
 import Footer from "../../Components/Footer";
 import GlobalSEO from "../../Components/GlobalSEO";
 import Breadcrumbs from "../../Components/Breadcrumbs";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import { ChevronRight } from "lucide-react";
 const Tarif = () => {
     // Récupération des données SEO
     const seoDataPage = seoData["debouchage-tarifs"];
@@ -59,7 +64,7 @@ const Tarif = () => {
             {/* Breadcrumbs */}
             <Breadcrumbs items={breadcrumbsData} />
 
-            <main className="relative top-10">
+            <main className="relative md:top-10">
                 <section className="w-full relative h-[450px] bg-[url('/public/assets/images/bg-tarif.jpg')] bg-cover bg-center flex items-center justify-center">
                     <div className="bg-black/70 bg-opacity-50 p-8 rounded absolute left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center">
                         <h2 className="text-white text-5xl font-bold mb-6">Nos tarifs débouchages</h2>
@@ -67,9 +72,9 @@ const Tarif = () => {
                         <p className="text-2xl text-white font-semibold">Déplacement Gratuit - 24h24 et 7J/7 sans Majoration - Devis gratuit</p>
                     </div>
                 </section>
-                <section className="w-full bg-white py-20">
-                    <div className="max-w-screen-xl mx-auto px-20">
-                        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-10">
+                <section className="w-full bg-white md:py-20 py-10">
+                    <div className="max-w-screen-xl mx-auto md:px-20 px-5">
+                        <div className="w-full md:grid hidden grid-cols-1 md:grid-cols-3 gap-10">
                             {
                                 dataTarifs.map((item, index) => (
                                     <div key={index} className="bg-white rounded-3xl drop-shadow-2xl border-[1px] border-[#D9D9D9] flex flex-col">
@@ -94,21 +99,69 @@ const Tarif = () => {
                                 ))
                             }
                         </div>
-                        <div className="flex justify-center py-10">
-                            <p className="text-black text-xl">Modes de paiement accepté : <b>Espèce, CB, Chèque</b></p>
+                        <div className="w-full md:hidden relative block">
+                            {/* Boutons de navigation personnalisés */}
+                            <div className="absolute w-full left-0 right-0 -bottom-26 flex justify-center gap-3 z-20">
+                                <button ref={null} aria-label="Previous" className="ourservices-prev cursor-pointer left-1/2 -bottom-26 -translate-y-10 z-20 bg-[#222021] text-[#00ADEF] rounded-full w-10 h-10 shadow-lg flex items-center justify-center hover:scale-105 transition-transform">
+                                    <ChevronRight className="w-5 h-5 text-white rotate-180" />
+                                </button>
+                                <button ref={null} aria-label="Next" className="ourservices-next cursor-pointer right-[42%] -bottom-26 -translate-y-10 z-20 bg-[#222021] text-[#00ADEF] rounded-full w-10 h-10 shadow-lg flex items-center justify-center hover:scale-105 transition-transform">
+                                    <ChevronRight className="w-5 h-5 text-white" />
+                                </button>
+                            </div>
+                            <Swiper
+                                spaceBetween={10}
+                                slidesPerView={1}
+                                navigation={{
+                                    prevEl: '.ourservices-prev',
+                                    nextEl: '.ourservices-next'
+                                }}
+                                autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false,
+                                }}
+                                modules={[Autoplay, Navigation]}
+                            >
+                                {
+                                    dataTarifs.map((item, index) => (
+                                        <SwiperSlide key={index} className="bg-white rounded-3xl drop-shadow-sm border-[1px] border-[#D9D9D9] flex flex-col">
+                                            <h3 className="py-3 text-center bg-[#222021] text-white font-bold text-xl uppercase rounded-t-3xl">{item.label}</h3>
+                                            <div className="p-6 flex flex-col gap-4 flex-1 bg-white">
+                                                <ul className="list-disc list-inside mb-4 flex justify-center flex-col gap-y-1">
+                                                    {
+                                                        item.services.map((service, idx) => (
+                                                            <li key={idx} className="text-[#222021] text-sm font-medium">{service}</li>
+                                                        ))
+                                                    }
+                                                </ul>
+                                            </div>
+                                            <div className="py-8 bg-[#00ADEF] flex justify-center items-center rounded-b-3xl flex-col">
+                                                <div className="flex">
+                                                    <span className="text-white text-6xl font-bold">{item.price}€</span>
+                                                    <span className="text-white text-lg font-bold mt-7 ml-1">/TTC</span>
+                                                </div>
+                                                <p className="text-white text-sm font-light">sur la base d’une TVA à 10%</p>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </Swiper>
+                        </div>
+                        <div className="flex justify-center py-10 mt-10 md:mt-0">
+                            <p className="text-black text-xl text-center md:text-left">Modes de paiement accepté : <b>Espèce, CB, Chèque</b></p>
                         </div>
                     </div>
                 </section>
                 <section className="w-full py-10 bg-[#F9F9FF]">
-                    <div className="max-w-screen-xl mx-auto px-20">
-                        <div className="w-full grid grid-cols-2">
+                    <div className="max-w-screen-xl mx-auto md:px-20 px-5">
+                        <div className="w-full grid md:grid-cols-2 grid-cols-1">
                             <div className="h-[350px] bg-[url('/public/assets/images/paiement.jpg')] bg-cover bg-center rounded-3xl relative">
-                                <div className="w-26 h-26 rounded-full bg-[#FF43AF] absolute -right-12 top-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
+                                <div className="w-26 h-26 rounded-full bg-[#FF43AF] absolute md:-right-12 right-5 md:top-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
                                     <span className="text-white text-6xl font-bold leading-10">x3</span>
                                     <p className="text-sm text-white">sans frais</p>
                                 </div>
                             </div>
-                            <div className="px-16 flex flex-col justify-center">
+                            <div className="md:px-16 flex flex-col justify-center items-center md:items-start">
                                 <h3 className="text-3xl mb-6 text-[#00ADEF]">Mode de paiement</h3>
                                 <ul className="list-disc pl-6 list-inside text-[#00ADEF] text-xl font-bold flex flex-col gap-y-1">
                                     <li>Espèce</li>
@@ -206,11 +259,11 @@ const Tarif = () => {
 
                     </div>
                 </section>
-                <section className='w-full h-[1200px] relative flex justify-end'>
-                    <div className='w-3/5 h-full pr-3/5'>
+                <section className='w-full md:h-[1200px] h-[800px] relative md:flex justify-end'>
+                    <div className='md:w-3/5 w-full h-full md:pr-3/5'>
                         <img src='/assets/images/bg-contact.jpg' alt='Contact Us' className='w-full h-full object-cover' />
-                        <div className='absolute px-10 top-1/2 -translate-y-1/2 left-[30%] -translate-x-[30%] w-[650px] min-h-[700px] bg-[#00ADEF] rounded-2xl pt-10 pb-20'>
-                            <h1 className='text-4xl font-light pt-10 text-[#222021]'>Une question ?<br /> <b className='font-bold'>Besoin d'un devis ?</b><br /> Ecrivez-nous !</h1>
+                        <div className='absolute z-20 md:px-10 px-4 md:top-1/2 top-14 md:-translate-y-1/2 left-[30%] -translate-x-[30%] md:w-[550px] w-[330px] min-h-[700px] bg-[#00ADEF] rounded-2xl md:pt-10 md:pb-20'>
+                            <h1 className='md:text-4xl text-3xl font-light pt-10 text-[#222021]'>Une question ?<br /> <b className='font-bold'>Besoin d'un devis ?</b><br /> Ecrivez-nous !</h1>
                             <form className='flex flex-col mt-10'>
                                 <div className='grid grid-cols-2 gap-5 mb-5'>
                                     <div className='flex flex-col'>

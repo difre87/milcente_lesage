@@ -59,17 +59,17 @@ const ZoneIntervention = () => {
             {/* Breadcrumbs */}
             <Breadcrumbs items={breadcrumbsData} />
 
-            <main className="w-full relative top-10">
-                <section className="w-full relative h-[450px] bg-[url('/public/assets/images/bg-zone-intervention.png')] bg-cover bg-center flex items-center justify-center">
+            <main className="w-full relative md:top-10">
+                <section className="w-full relative md:h-[450px] h-[350px] bg-[url('/public/assets/images/bg-zone-intervention.png')] bg-cover bg-center flex items-center justify-center">
                     <div className="bg-black/70 bg-opacity-50 p-8 rounded absolute left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center">
 
                     </div>
                 </section>
-                <section className="bg-white py-20 px-10">
-                    <div className="max-w-screen-xl -mt-36 min-h-[600px] py-10 px-8 bg-white drop-shadow-sm rounded-2xl mx-auto relative overflow-hidden">
-                        <div className="w-full grid grid-cols-3">
+                <section className="bg-white py-20 md:px-10 px-4">
+                    <div className="max-w-screen-xl md:-mt-36 -mt-42 min-h-[600px] py-10 md:px-8 px-3 bg-white drop-shadow-sm rounded-2xl mx-auto relative overflow-hidden">
+                        <div className="w-full grid md:grid-cols-3">
                             <div className="flex flex-col gap-4 col-span-1">
-                                <h2 className="text-3xl font-semibold text-[#404040] leading-0">Nos zones d'intervention</h2>
+                                <h2 className="text-3xl font-semibold text-[#404040] md:leading-0">Nos zones d'intervention</h2>
                                 <span className="text-[#00ADEF] text-xl">30km autour <b>d'Orléans</b></span>
                                 <ul className="list-disc list-inside text-sm text-[#222021] font-light mt-2 flex flex-col gap-1">
                                     <li>Fleury-les-Aubrais</li>
@@ -95,7 +95,7 @@ const ZoneIntervention = () => {
                                     <li>Marcilly-en-Villette</li>
                                 </ul>
                             </div>
-                            <div className="col-span-2 flex  items-center relative">
+                            <div className="col-span-2 md:flex hidden  items-center relative">
                                 <div className=" py-2 absolute drop-shadow-xl bg-white rounded-full top-1/3 left-24 flex items-center justify-center gap-2 px-6">
                                     <MapPin className="text-black" />
                                     <h4 className="text-[#00ADEF] uppercase text-xl font-bold">Orléans</h4>
@@ -104,7 +104,7 @@ const ZoneIntervention = () => {
                             </div>
                         </div>
 
-                        <img src="/assets/images/technicien.png" alt="Carte des zones d'intervention" width={350} height={400} className="absolute -bottom-20 right-20" />
+                        <img src="/assets/images/technicien.png" alt="Carte des zones d'intervention" width={350} height={400} className="absolute -bottom-20 right-20 hidden md:block" />
                     </div>
                 </section>
                 <Testimonies />
