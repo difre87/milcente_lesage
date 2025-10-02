@@ -3,15 +3,38 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Breadcrumbs from '../Components/Breadcrumbs';
 import GlobalSEO from '../Components/GlobalSEO';
-import { Link } from "@inertiajs/react";
+import { Link, useForm } from "@inertiajs/react";
 import { ArrowRight } from 'lucide-react';
 import { seoData } from '../types/data';
+import { useState } from 'react';
 
-const Contact = () => {
+const Contact = ({ flash }) => {
     const seoInfo = seoData.contact;
     const breadcrumbs = [
         { title: "Contact" }
     ];
+
+    const { data, setData, post, processing, errors, reset } = useForm({
+        nom: '',
+        prenom: '',
+        email: '',
+        telephone: '',
+        message: ''
+    });
+
+    const [showSuccess, setShowSuccess] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        post('/contact', {
+            onSuccess: () => {
+                reset();
+                setShowSuccess(true);
+                setTimeout(() => setShowSuccess(false), 5000);
+            }
+        });
+    };
 
     return (
         <>
@@ -77,31 +100,99 @@ const Contact = () => {
                     <img src='/assets/images/bg-contact.jpg' alt='Contact Us' className='w-full h-full object-cover' />
                     <div className='absolute z-20 md:px-10 px-4 md:top-1/2 top-14 md:-translate-y-1/2 left-[30%] -translate-x-[30%] md:w-[550px] w-[330px] min-h-[700px] bg-[#00ADEF] rounded-2xl md:pt-10 md:pb-20'>
                         <h1 className='md:text-4xl text-3xl font-light pt-10 text-[#222021]'>Une question ?<br /> <b className='font-bold'>Besoin d'un devis ?</b><br /> Ecrivez-nous !</h1>
-                        <form className='flex flex-col mt-10'>
+                        
+                        {/* Messages de confirmation et d'erreur */}
+                        {(flash?.success || showSuccess) && (
+                            <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                                ✅ {flash?.success || 'Votre message a été envoyé avec succès !'}
+                            </div>
+                        )}
+                        
+                        {flash?.error && (
+                            <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                                ❌ {flash.error}
+                            </div>
+                        )}
+
+                        <form onSubmit={handleSubmit} className='flex flex-col mt-10'>
                             <div className='grid grid-cols-2 gap-5 mb-5'>
                                 <div className='flex flex-col'>
-                                    <label htmlFor="name" className='text-white text-sm font-medium pb-2'>Nom</label>
-                                    <input type='text' placeholder='Nom' className='mb-5 px-5 py-3 text-[#222021] placeholder:text-black h-14 text-sm bg-white rounded-full focus:outline-3 focus:outline-[#222021] focus:ring-2 focus:ring-[#00ADEF]' />
+                                    <label htmlFor="nom" className='text-white text-sm font-medium pb-2'>Nom</label>
+                                    <input 
+                                        type='text' 
+                                        id="nom"
+                                        name="nom"
+                                        value={data.nom}
+                                        onChange={(e) => setData('nom', e.target.value)}
+                                        placeholder='Nom' 
+                                        className={`mb-1 px-5 py-3 text-[#222021] placeholder:text-black h-14 text-sm bg-white rounded-full focus:outline-3 focus:outline-[#222021] focus:ring-2 focus:ring-[#00ADEF] ${errors.nom ? 'border-2 border-red-500' : ''}`}
+                                    />
+                                    {errors.nom && <span className="text-red-800 text-xs mt-1">{errors.nom}</span>}
                                 </div>
                                 <div className='flex flex-col'>
                                     <label htmlFor="prenom" className='text-white text-sm font-medium pb-2'>Prénom</label>
-                                    <input type='text' placeholder='Prénom' className='mb-5 px-5 py-3 text-[#222021] placeholder:text-black h-14 text-sm bg-white rounded-full focus:outline-3 focus:outline-[#222021] focus:ring-2 focus:ring-[#00ADEF]' />
+                                    <input 
+                                        type='text' 
+                                        id="prenom"
+                                        name="prenom"
+                                        value={data.prenom}
+                                        onChange={(e) => setData('prenom', e.target.value)}
+                                        placeholder='Prénom' 
+                                        className={`mb-1 px-5 py-3 text-[#222021] placeholder:text-black h-14 text-sm bg-white rounded-full focus:outline-3 focus:outline-[#222021] focus:ring-2 focus:ring-[#00ADEF] ${errors.prenom ? 'border-2 border-red-500' : ''}`}
+                                    />
+                                    {errors.prenom && <span className="text-red-800 text-xs mt-1">{errors.prenom}</span>}
                                 </div>
                                 <div className='flex flex-col'>
-                                    <label htmlFor="phone" className='text-white text-sm font-medium pb-2'>Téléphone</label>
-                                    <input type='text' placeholder='Téléphone' className='mb-5 px-5 py-3 text-[#222021] placeholder:text-black h-14 text-sm bg-white rounded-full focus:outline-3 focus:outline-[#222021] focus:ring-2 focus:ring-[#00ADEF]' />
+                                    <label htmlFor="telephone" className='text-white text-sm font-medium pb-2'>Téléphone</label>
+                                    <input 
+                                        type='tel' 
+                                        id="telephone"
+                                        name="telephone"
+                                        value={data.telephone}
+                                        onChange={(e) => setData('telephone', e.target.value)}
+                                        placeholder='Téléphone' 
+                                        className={`mb-1 px-5 py-3 text-[#222021] placeholder:text-black h-14 text-sm bg-white rounded-full focus:outline-3 focus:outline-[#222021] focus:ring-2 focus:ring-[#00ADEF] ${errors.telephone ? 'border-2 border-red-500' : ''}`}
+                                    />
+                                    {errors.telephone && <span className="text-red-800 text-xs mt-1">{errors.telephone}</span>}
                                 </div>
                                 <div className='flex flex-col'>
                                     <label htmlFor="email" className='text-white text-sm font-medium pb-2'>Email</label>
-                                    <input type='email' placeholder='Email' className='mb-5 px-5 py-3 text-[#222021] placeholder:text-black h-14 text-sm bg-white rounded-full focus:outline-3 focus:outline-[#222021] focus:ring-2 focus:ring-[#00ADEF]' />
+                                    <input 
+                                        type='email' 
+                                        id="email"
+                                        name="email"
+                                        value={data.email}
+                                        onChange={(e) => setData('email', e.target.value)}
+                                        placeholder='Email' 
+                                        className={`mb-1 px-5 py-3 text-[#222021] placeholder:text-black h-14 text-sm bg-white rounded-full focus:outline-3 focus:outline-[#222021] focus:ring-2 focus:ring-[#00ADEF] ${errors.email ? 'border-2 border-red-500' : ''}`}
+                                    />
+                                    {errors.email && <span className="text-red-800 text-xs mt-1">{errors.email}</span>}
                                 </div>
                             </div>
                             <div className='flex flex-col'>
                                 <label htmlFor="message" className='text-white text-sm font-medium pb-2'>Message</label>
-                                <textarea placeholder='Message' className='mb-5 px-5 py-3 rounded-xl text-[#222021] text-lg h-32 bg-white focus:outline-3 focus:outline-[#222021]'></textarea>
+                                <textarea 
+                                    id="message"
+                                    name="message"
+                                    value={data.message}
+                                    onChange={(e) => setData('message', e.target.value)}
+                                    placeholder='Message' 
+                                    className={`mb-1 px-5 py-3 rounded-xl text-[#222021] text-lg h-32 bg-white focus:outline-3 focus:outline-[#222021] ${errors.message ? 'border-2 border-red-500' : ''}`}
+                                ></textarea>
+                                {errors.message && <span className="text-red-800 text-xs mt-1">{errors.message}</span>}
                             </div>
 
-                            <button type='submit' className='bg-[#222021] text-white px-5 py-4 w-[200px] cursor-pointer flex justify-center items-center text-sm font-medium rounded-full hover:bg-[#FF43AF] transition duration-300'>Envoyer un message</button>
+                            <button 
+                                type='submit' 
+                                disabled={processing}
+                                className={`bg-[#222021] text-white px-5 py-4 w-[200px] flex justify-center items-center text-sm font-medium rounded-full transition duration-300 mt-5 ${
+                                    processing 
+                                        ? 'opacity-50 cursor-not-allowed' 
+                                        : 'cursor-pointer hover:bg-[#FF43AF]'
+                                }`}
+                            >
+                                {processing ? 'Envoi en cours...' : 'Envoyer un message'}
+                            </button>
                         </form>
                     </div>
                 </div>

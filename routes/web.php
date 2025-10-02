@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return Inertia::render('Index', [
@@ -18,6 +19,8 @@ Route::get('/apropos', function () {
 Route::get('/contact', function () {
     return Inertia::render('Contact');
 });
+
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('/debouchage-canalisation', function () {
     return Inertia::render('DebouchageCanalisation');
