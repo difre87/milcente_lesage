@@ -1,0 +1,23 @@
+# Configuration OVH Alternative 1 - Port 587 avec TLS
+MAIL_MAILER=smtp
+MAIL_HOST=pro1.mail.ovh.net
+MAIL_PORT=587
+MAIL_USERNAME=milcentlesage@performancebusinesss.com
+MAIL_PASSWORD=Milcentlesage2025
+MAIL_ENCRYPTION=tls
+
+# Configuration OVH Alternative 2 - Port 25 sans encryption
+MAIL_MAILER=smtp
+MAIL_HOST=pro1.mail.ovh.net
+MAIL_PORT=25
+MAIL_USERNAME=milcentlesage@performancebusinesss.com
+MAIL_PASSWORD=Milcentlesage2025
+MAIL_ENCRYPTION=null
+
+# Configuration OVH Alternative 3 - Serveur SSL classique
+MAIL_MAILER=smtp
+MAIL_HOST=ssl0.ovh.net
+MAIL_PORT=465
+MAIL_USERNAME=milcentlesage@performancebusinesss.com
+MAIL_PASSWORD=Milcentlesage2025
+MAIL_ENCRYPTION=ssl
