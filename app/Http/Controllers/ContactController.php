@@ -23,7 +23,7 @@ class ContactController extends Controller
             ];
 
             // Envoi de l'email
-            Mail::to('milcentlesage@gmail.com')->send(new ContactFormMail($contactData));
+            Mail::to('piticco.bruno@gmail.com')->send(new ContactFormMail($contactData));
 
             return back()->with('success', 'Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
 

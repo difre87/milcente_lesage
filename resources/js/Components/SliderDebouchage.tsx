@@ -107,7 +107,7 @@ const SliderDebouchage = () => {
                             className="font-light md:text-md text-sm text-white mt-6"
                             variants={itemVariants}
                         >
-                            Milcent Lesage est disponible au <b className="text-[#FF43AF] font-bold">02 38 73 24 07</b>
+                            Milcent Lesage est disponible au <b className="text-[#FF43AF] font-bold">07 77 26 89 21</b>
                         </motion.p>
 
                         <motion.div
@@ -152,7 +152,7 @@ const SliderDebouchage = () => {
                     </div>
                     <div className="flex items-center ">
                         <Phone  className="w-4 h-4 text-[#000000]" />
-                        <span className="text-lg font-light text-[#FF43AF]"><b className="font-bold">02 38 73 24 07</b> (Appel direct)</span>
+                        <span className="text-lg font-light text-[#FF43AF]"><b className="font-bold">07 77 26 89 21</b> (Appel direct)</span>
                     </div>
                 </div>
                 <motion.img
