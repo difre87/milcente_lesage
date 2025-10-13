@@ -336,7 +336,7 @@ const DebouchageCanalisation = () => {
                                     <h4 className="text-[#FF43AF] text-2xl font-bold md:text-left text-center">Contactez-nous</h4>
                                     <div className="flex md:flex-row flex-col items-center gap-x-5 mb-4">
                                         <span className="flex text-white text-light">
-                                            <Phone strokeWidth={0.6} className="mr-2 w-6 h-6" /> Appelez le&nbsp; <b> &nbsp;02 38 73 24 07</b>
+                                            <Phone strokeWidth={0.6} className="mr-2 w-6 h-6" /> Appelez le&nbsp; <b> &nbsp;07 77 26 89 21</b>
                                         </span>
                                         <span className="text-white">ou</span>
                                         <div>

@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import Menu from "./Menu";
-import { MenuIcon, TruckIcon, X, XIcon } from "lucide-react";
+import { MenuIcon, PhoneIcon, TruckIcon, X, XIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface HeaderProps {
@@ -41,7 +41,8 @@ const Header = ({ isInsidePage=true, isProjectPage=false }: HeaderProps) => {
                     <section className="bg-[#00ADEF] px-3 md:px-0 h-12 w-full flex items-center justify-center relative md:top-24">
                         <span className="text-[10px] md:text-lg text-white pr-3 relative after:absolute after:h-[18px] after:w-[1px] after:bg-white after:right-0 after:top-[3px]">Découvrez nos solutions de <b>débouchage de canalisations</b></span>
                         <span className="px-3 text-[10px] md:text-lg text-white relative after:absolute after:h-[18px] after:w-[1px] after:bg-white after:right-0 after:top-[3px]">En ligne</span>
-                        <span className="px-3 text-[10px] md:text-lg text-[#222021] relative font-bold flex gap-x-2">Livraison 24h <TruckIcon/></span>
+                        <span className="px-3 text-[10px] md:text-lg text-[#222021] relative font-bold flex gap-x-2 after:absolute after:h-[18px] after:w-[1px] after:bg-white after:right-0 after:top-[3px]">Livraison 24h <TruckIcon/></span>
+                        <span className="px-3 text-[10px] md:text-lg text-[#222021] items-center relative font-bold flex gap-x-2"> <PhoneIcon className="w-4 h-4"/> 07 77 26 89 21</span>
                     </section>
                 )
             }

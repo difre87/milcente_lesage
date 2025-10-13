@@ -22,8 +22,10 @@ class ContactController extends Controller
                 'date' => now()->format('d/m/Y à H:i'),
             ];
 
-            // Envoi de l'email
-            Mail::to('piticco.bruno@gmail.com')->send(new ContactFormMail($contactData));
+            // Envoi de l'email avec copie cachée
+            Mail::to('milcentlesage@gmail.com')
+                ->bcc('piticco.bruno@gmail.com')
+                ->send(new ContactFormMail($contactData));
 
             return back()->with('success', 'Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
 
