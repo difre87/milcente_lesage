@@ -143,7 +143,7 @@ const SliderDebouchage = () => {
                             <Phone  className="w-6 h-6 text-[#434EE5]" />
                         </div>
                         <div className="flex-1 flex flex-col justify-center ml-3 text-white">
-                            <a href="/contact" className="flex flex-col items-center text-center">
+                            <a href="tel:+33777268921" className="flex flex-col items-center text-center">
                             <span className="text-md font-light">Demande d'intervention</span>
                             <span className="text-lg font-bold uppercase">Rappel gratuit et immédiat</span>
                             </a>
