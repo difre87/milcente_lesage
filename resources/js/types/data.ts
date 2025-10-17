@@ -275,7 +275,7 @@ export const subServiceContent = {
                     "title": "Dépannage de plomberie rapide à Orléans",
                     "description": "<ul class='list-disc'><li>Vous arrivez dans votre salon et vous découvrez qu’il est inondé…</li><li>La robinetterie fuit constamment…</li><li>Le ballon d’eau chaude fuit dans le cagibi…</li><li>Les canalisations sont bouchées…</li><li>Le chauffage ne fonctionne plus...</li></ul><p>C’est vraiment la cata, la catastrophe ! Bien que nous ne souhaitions rien de tout cela à personne, ce sont des événements qui arrivent malgré tout.</p><p>Pour y remédier au plus vite, appelez un plombier Milcent Lesage près de la ville d'Orléans et demandez une intervention pour un dépannage en urgence !</p>",
                     "buttonText": "Urgence plomberie",
-                    "buttonUrl": "tel:0238701234",
+                    "buttonUrl": "tel:0777268921",
                     "image": "/assets/images/services/plomberie/1.png"
                 },
                 {
@@ -824,7 +824,7 @@ export const seoData = {
     },
     "contact": {
         title: "Contact Milcent Lesage - Devis gratuit plomberie chauffage Orléans",
-        description: "Contactez Milcent Lesage pour vos travaux de plomberie, chauffage, climatisation à Orléans. Devis gratuit, intervention rapide. 02 38 70 12 34",
+        description: "Contactez Milcent Lesage pour vos travaux de plomberie, chauffage, climatisation à Orléans. Devis gratuit, intervention rapide. 07 77 26 89 21",
         keywords: "contact milcent lesage, devis plomberie, devis chauffage, contact plombier orléans, urgence plomberie, telephone plombier",
         canonical: "https://milcentlesage.fr/contact",
         ogImage: "/assets/images/bg-contact.jpg",
