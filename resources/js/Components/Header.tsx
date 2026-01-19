@@ -42,7 +42,7 @@ const Header = ({ isInsidePage=true, isProjectPage=false }: HeaderProps) => {
                         <span className="text-[10px] md:text-lg text-white pr-3 relative after:absolute after:h-[18px] after:w-[1px] after:bg-white after:right-0 after:top-[3px]">Découvrez nos solutions de <b>débouchage de canalisations</b></span>
                         <span className="px-3 text-[10px] md:text-lg text-white relative after:absolute after:h-[18px] after:w-[1px] after:bg-white after:right-0 after:top-[3px]">En ligne</span>
                         {/* <span className="px-3 text-[10px] md:text-lg text-[#222021] relative font-bold flex gap-x-2 after:absolute after:h-[18px] after:w-[1px] after:bg-white after:right-0 after:top-[3px]">Livraison 24h <TruckIcon/></span> */}
-                        <span className="px-3 text-[10px] md:text-lg text-[#222021] items-center relative font-bold flex gap-x-2"> <PhoneIcon className="w-4 h-4"/> 07 77 26 89 21</span>
+                        <span className="px-3 text-[10px] md:text-lg text-[#222021] items-center relative font-bold flex gap-x-2"> <PhoneIcon className="w-4 h-4"/>02 38 73 24 07</span>
                     </section>
                 )
             }
